@@ -1,0 +1,137 @@
+.default-list	{
+	.list-item {
+		position: relative;
+		display: block;
+		padding: 8px 16px;
+		margin-bottom: -1px;
+		color: #455A64;
+		font-weight: 700;
+		border-left: 3px solid transparent;
+
+
+		&:hover {
+			border-left: 3px solid #E8E6A4;
+		};
+
+		&.active,
+		&.active:hover,
+		&.active:focus {
+			border-left: 3px solid #455A64;
+
+		};
+	}
+
+}
+
+
+
+.v-timeline {
+		/* ---- Timeline ---- */
+
+		ol {
+			position: relative;
+			display: block;
+			height: 2px;
+			background: #B4D79F;
+		}
+		ol::before,
+		ol::after{
+			content: "";
+			position: absolute;
+			display: block;
+			width: 40px;
+			height: 2px;
+			background: #B4D79F;
+
+		}
+		ol::before {
+			left: -35px;
+		}
+		ol::after {
+			right: -40px;
+		}
+
+		/* ---- Timeline elements ---- */
+
+		li {
+			position: relative;
+			top: -15px;
+			display: inline-block;
+			float: left;
+			width: 240px;
+			font: smaller arial;
+		}
+
+		.li-risk, .li-moderate, .li-safe {
+			@extend li;
+		}
+
+		.li-risk::before {
+			content: "";
+			position: absolute;
+			top: 7px;
+			left: -29px;
+			display: block;
+			border: 9px solid #E65D5D;
+			border-radius: 2px;
+			background: #E65D5D;
+		}
+
+		.li-safe::before {
+			content: "";
+			position: absolute;
+			top: 7px;
+			left: -29px;
+			display: block;
+			border: 9px solid #569610;
+			border-radius: 2px;
+			background: #569610;
+		}
+
+		.li-moderate::before {
+			content: "";
+			position: absolute;
+			top: 7px;
+			left: -29px;
+			display: block;
+			border: 9px solid #E8C92C;
+			border-radius: 2px;
+			background: #E8C92C;
+		}
+
+		/* ---- Details ---- */
+
+		.details {
+
+			position: absolute;
+			left: -40px;
+			top: 50px;
+			font-weight: 700;
+			color: #999c9e;
+		}
+
+		/* ---- status ---- */
+
+		.status {
+
+			position: absolute;
+			left: -30px;
+			top: -10px;
+			font-weight: 700;
+			color: #999c9e;
+		}
+
+		.details::before {
+			content: "";
+			position: absolute;
+			left: 19px;
+			top: -25px;
+			display: block;
+			width: 1px;
+			height: 25px;
+			border-top: 0;
+			background-color: #999c9e;
+		}
+
+		/* ---- Hover effects ---- */
+	}

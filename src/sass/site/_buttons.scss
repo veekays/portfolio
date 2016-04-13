@@ -1,0 +1,59 @@
+.btn {
+	@extend .btn;
+	border-radius: 2px;
+	border-color: #cfd8dc;
+}
+.btn-round {
+  @extend .btn;
+  border: none;
+  border-radius: 50%;
+}
+
+.btn-square {
+	@extend .btn;
+	border: none;
+	border-radius: 0;
+}
+
+.btn-long {
+  @extend .btn;
+  padding: 6px 32px;
+}
+
+.scroll-top-btn {
+  background-color: #fff;
+  position:fixed;
+  bottom:20px;
+  right:3%;
+  z-index:100;
+  font-size:17px;
+}
+
+.scroll-top-btn:hover {
+  background-color: #e2e2e2;
+}
+  
+@media only screen and (max-width: 767px) {
+  .scroll-top-btn {
+    margin-bottom: 3px;
+    right: 3px;
+    border-radius: 0;
+    border-top-left-radius:3px; 
+
+  }
+}
+
+.btn-zam {
+  background-color: $zam-blue;
+  border-color: #c2c2c2;
+  color: #fff;
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: #fff;
+    border-color: $zam-blue;
+    color: $zam-blue;
+  }
+}
+
+

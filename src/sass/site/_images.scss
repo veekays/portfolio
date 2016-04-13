@@ -1,0 +1,27 @@
+
+
+$range: 200;
+
+@for $i from 30 through $range {
+	.img-circle-#{$i} { 
+		width: #{$i}px; 
+		height: #{$i}px;
+		margin: 0 auto;
+		border-radius: 50%;
+		border: #{$i/60}px solid $dark; 
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+		transition: all .3s ease-in-out;
+	}
+}
+
+@for $i from 30 through $range {
+	.img-square-#{$i} { 
+		width: #{$i}px; 
+		height: #{$i}px;
+		margin: 0 auto;
+		border-radius: #{$i/30}px;
+		border: #{$i/60}px solid #F5F5F5; 
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+		transition: all .3s ease-in-out;
+	}
+}    

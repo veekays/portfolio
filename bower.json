@@ -1,0 +1,29 @@
+{
+  "name": "scriet",
+  "version": "0.0.0",
+  "homepage": "scriet",
+  "authors": [
+    "Satyam Yadav <satyamyadav3@gmail.com>"
+  ],
+  "description": " website",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "private",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "jquery": "~2.1.3",
+    "lodash": "~3.10.1",
+    "toastr": "*",
+    "nprogress": "~0.2.0",
+    "font-awesome": "fontawesome#^4.5.0"
+  }
+}

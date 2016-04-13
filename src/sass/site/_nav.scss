@@ -1,0 +1,222 @@
+.navbar-static-top {
+  height: 55px;
+  background-color: rgba(193, 187, 187, 0.58);
+  background-image: url(img/cream-paper.png);
+  background-repeat: repeat-x;
+  color: #c73a68;
+  border-bottom: none;
+  box-shadow: 0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24);
+  transition: all .3s ease-in-out;
+  .navbar-form {
+    margin-top: 11px;
+    margin-bottom: 11px;
+    .form-control {
+      border: none;
+      border-style: none;
+
+    }
+  }
+
+  .navbar-nav li {
+    a {
+      line-height: 25px;
+      color: rgba(#83304b, 0.98);
+
+      &:hover, &:active {
+        color: #c73a68;
+        background-color: transparent;
+      }
+    }
+  }
+
+  .profile-pic {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .hexagon {
+    position: relative;
+    width: 35px;
+    height: 20.21px;
+    background-color: #56BDE8;
+    margin: 17.5px -17px;
+    margin-right: 10px;
+    z-index: 1000;
+    padding-left: 10px;
+  }
+
+  .hexagon:before,
+  .hexagon:after {
+    left:0;
+    content: "";
+    position: absolute;
+    width: 0;
+    border-left: 17.5px solid transparent;
+    border-right: 17.5px solid transparent;
+  }
+
+  .hexagon:before {
+    bottom: 100%;
+    border-bottom: 10.10px solid #56BDE8;
+  }
+
+  .hexagon:after {
+    top: 100%;
+    width: 0;
+    border-top: 10.10px solid #56BDE8;
+  }
+
+
+}
+
+.navbar-static-side {
+
+  background-color: $dark;
+  width: 200px;
+  position: absolute;
+
+  .header-logo {
+    height: 55px;
+    text-align: center;
+    font-size: 24px !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24);
+    background-color: $dark;
+    border-bottom: 1px solid $dark-1;
+    &:hover {
+      background-color: $dark;
+
+    }
+  }
+  .nav-label {
+    display: inline-block;
+  }
+}
+
+
+body.mini-navbar {
+  .navbar-static-side {
+    width: 50px;
+    .nav-label {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-static-side {
+    display: none;
+  }
+  body.mini-navbar {
+    .navbar-static-side {
+      display: block;
+      -webkit-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s;
+    }
+  }
+}
+
+.navbar-default {
+
+  .nav {
+    li {
+      a {
+        color: #90989F;
+        border-left: 3px solid $dark;
+
+        &:hover {
+          color: #90989F;
+          border-left: 3px solid #56BDE8;
+          background-color: #223240;
+        }
+
+        &.active,
+        &.active:hover,
+        &.active:focus {
+          color: #90989F;
+          border-left: 3px solid #56BDE8;
+          background-color: #223240;
+
+
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+.zam-tabs {
+  position: relative;
+  height: 48px;
+  background-color: transparent;
+  margin: 0 auto;
+  width: 100%;
+  white-space: nowrap;
+
+  .zam-tab {
+    display: block;
+    float: left;
+    text-align: center;
+    line-height: 45px;
+    height: 45px;
+    margin: 10px;
+    text-transform: capitalize;
+    letter-spacing: .8px;
+    max-width: 15%;
+    font-weight: 700;
+
+    a {
+      color: $dark-text;
+      width: auto;
+      height: 100%;
+      padding-bottom: 20px;
+    }
+    &:hover,
+    &:active {
+      a {
+        color: $link-text;
+        border-bottom: 3px solid $link-text;
+      }
+    }
+  }
+  .active {
+    a {
+      color: $link-text;
+      border-bottom: 3px solid $link-text;
+    }
+  }
+  .indicator {
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    background-color: $dark;
+    will-change: left, right;
+  }
+}
+
+
+.pace-done .navbar-static-side,
+.pace-done .nav-header,
+.pace-done li.active,
+.pace-done #page-wrapper,
+.pace-done .footer {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+// sub header
+#sub-header {
+
+  .breadcrumb > li + li:before {
+      content: "";
+      padding: 0 0;
+      color: #ccc;
+  }
+}

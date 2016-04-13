@@ -1,0 +1,9 @@
+.container-fluid {
+	  @extend .container-fluid;
+		@media (max-width: $screen-md-min) {
+	  margin: 0;
+	  padding: 0;
+	}
+
+    
+}
