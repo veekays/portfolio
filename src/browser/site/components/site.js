@@ -128,18 +128,31 @@ var resumeData = {
 }
 
 
+
+
 function displayData(data) {
   // load template text
-  var template = $('#template').html();
+  //var template = $('#template').html();
   // complie template and bind context
-  var compiled_html = _.template(template)({
+
+  app.utils.ajax.get('/views/main.html').then(function(tmpl){
+    //console.log(tmpl);
+    var el = document.createElement('div');
+    el.innerHTML = tmpl;
+    var template = $(el).find('#template').html();
+    console.log(template);
+
+  var compiled_html = _.template(tmpl)({
     resume: data
   });
   // appent to body
   $('body').append(compiled_html);
+  });
 }
 
-$(function() {
+
+  //render('main', resumeData);
+(function() {
   displayData(resumeData);
 
   var $downloadResume = app.$body.find('.download-resume');
@@ -148,7 +161,7 @@ $(function() {
     ev.preventDefault();
     console.log('click');
     window.print();
-/*    $resume.printThis({
+    $resume.printThis({
         debug: false,               
         importCSS: true,            
         importStyle: true,         
@@ -158,11 +171,11 @@ $(function() {
         printDelay: 333,          
         formValues: false          
     });
-*/
+
 
     });
 
-});
+})();
 
 
 
