@@ -24,13 +24,17 @@
 				.list-group-item {
 					background-color: transparent;
 					border: none;
-					color: #fff;
+					color: color("yellow", "lighten-5");
 					margin-top: 20px;
 					.list-group-item-heading {
-						color: #fff;
+						color: color("yellow", "lighten-1");
 						margin-top: 4px;
-						margin-left: 35px;
 						text-transform: capitalize;
+						
+						i {
+							margin-right: 5px;
+							color: #fff;
+						}	
 					}
 
 				}
@@ -46,6 +50,18 @@
 
 	.right-container {
 
+
+	}
+
+
+
+
+
+}
+
+@media (min-width: 1200px){
+	.resume-template-default {
+	  width: 1100px;
 	}
 }
 

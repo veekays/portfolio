@@ -16622,7 +16622,8 @@ body.mini-navbar .navbar-static-side {
 
 .btn, .btn-round, .btn-square, .btn-long {
   border-radius: 2px;
-  border-color: #cfd8dc; }
+  border-color: #cfd8dc;
+  padding: 6px 11px; }
 
 .btn-round {
   border: none;
@@ -19850,18 +19851,23 @@ body.mini-navbar .navbar-static-side {
     .resume-template-default .left-container .profile-details .list-group .list-group-item {
       background-color: transparent;
       border: none;
-      color: #fff;
+      color: #fffde7;
       margin-top: 20px; }
       .resume-template-default .left-container .profile-details .list-group .list-group-item .list-group-item-heading {
-        color: #fff;
+        color: #ffee58;
         margin-top: 4px;
-        margin-left: 35px;
         text-transform: capitalize; }
+        .resume-template-default .left-container .profile-details .list-group .list-group-item .list-group-item-heading i {
+          margin-right: 5px;
+          color: #fff; }
     .resume-template-default .left-container .profile-details .list-group .btn-round {
       display: inline-block;
       float: left;
       background-color: #373B3E; }
 
+@media (min-width: 1200px) {
+  .resume-template-default {
+    width: 1100px; } }
 @media print {
   body {
     background-color: #fffde7 !important; }
