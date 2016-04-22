@@ -140,7 +140,7 @@ function displayData(data) {
     var el = document.createElement('div');
     el.innerHTML = tmpl;
     var template = $(el).find('#template').html();
-    console.log(template);
+    //console.log(template);
 
   var compiled_html = _.template(tmpl)({
     resume: data
