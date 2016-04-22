@@ -22,16 +22,6 @@ app.utils.ajax = function (method, url, params) {
       var err = argThree;
     }
 
-    // handle authentication modal
-    if (xhr.status === 401) {
-
-      if (url === '/modal/review') {
-        params.modalId = "#reviewModal";
-      }
-      app.utils.requestSerializer(method, url, params);
-      app.utils.loadModal('#authModal', '/modal/auth');
-    }
-
     // handle behavior for changing nav automatically
     if (method === 'GET' && data && data.nav && typeof(data.nav) === 'string') {
       $('#nav').html(data.nav);

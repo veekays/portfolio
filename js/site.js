@@ -10,75 +10,6 @@ app.$document = $(document);
 app.$window = $(window);
 app.$body = $('body');
 app.pagename = $('#panel').data('page-name');
-//app.currentLocation = {full_address: '', country: '', lat: '', lng: ''};
-//app.searchedLocation = {full_address: '', country: '', lat: '', lng: ''};
-
-
-/*setting location 
-*/
-/*  var geocoder;
-  
-  var options = {
-      enableHighAccuracy: true,
-      timeout: 5000,
-      maximumAge: 0
-  };
-
-  function success(pos) {
-    var crd = pos.coords;
-    var lat = crd.latitude;
-    var lng = crd.longitude;
-    codeLatLng(lat, lng);
-    app.currentLocation.lat = lat;
-    app.currentLocation.lng = lng;
-
-  };
-
-  function error(err) {
-  };
-
-  navigator.geolocation.getCurrentPosition(success, error, options);
-
-  function initialize() {
-     geocoder = new google.maps.Geocoder();
-   }
-
-  function codeLatLng(lat, lng) {
-
-    var latlng = new google.maps.LatLng(lat, lng);
-    geocoder.geocode({'latLng': latlng}, function(results, status) {
-      if (status == google.maps.GeocoderStatus.OK) {
-        if (results[1]) {
-         //find country name
-          for (var i=0; i<results[0].address_components.length; i++) {
-            for (var b=0;b<results[0].address_components[i].types.length;b++) {
-
-             //there are different types that might hold a city admin_area_lvl_1 usually does in come cases looking for sublocality type will be more appropriate
-              if (results[0].address_components[i].types[b] == "political") {
-                 //this is the object you are looking for
-                city= results[0].address_components[i];
-                break;
-              }
-            }
-          }
-         //city data
-          app.currentLocation.country = city.long_name;
-          app.currentLocation.full_address = results[1].formatted_address; 
-
-        } else {
-          console.log('no results for location');
-        }
-      } else {
-        console.log("Geocoder failed due to: " + status);
-      }
-    });
-  }
-
-   initialize();
-
-*/
-
-
 
 
 // ovverriding navigator for cross browser stuff
@@ -125,16 +56,6 @@ app.utils.ajax = function (method, url, params) {
       var err = argThree;
     }
 
-    // handle authentication modal
-    if (xhr.status === 401) {
-
-      if (url === '/modal/review') {
-        params.modalId = "#reviewModal";
-      }
-      app.utils.requestSerializer(method, url, params);
-      app.utils.loadModal('#authModal', '/modal/auth');
-    }
-
     // handle behavior for changing nav automatically
     if (method === 'GET' && data && data.nav && typeof(data.nav) === 'string') {
       $('#nav').html(data.nav);
@@ -171,8 +92,6 @@ app.utils.domain = function () {
 app.utils.site = function (path) {
     return [location.protocol, '//', location.host, '/', path].join('');
 };
-
-app.utils.runningVideos = [];
 
 app.utils.preloaderHtml = function () {
   return (
@@ -261,33 +180,7 @@ app.utils.$elRemoved = function (domNodeRemovedEvent, $el) {
     return $evTarget.get(0) === $el.get(0) || $.contains($evTarget.get(0), $el.get(0));
 };
 
-app.utils.loadingBtn = function (id, d) {
-    var ID = $('#' + id);
-    var org = ID.text();
-    var orgVal = ID.val();
-    ID.val("Processing...");
-    ID.text("Processing...");
-    ID.addClass('loading disabled');
-    //var ref=this;
-    if (d != 0) {
-        setTimeout(function () {
-            ID.removeClass('loading disabled');
-            ID.text(org);
-            //ID.val(orgVal);
-        }, d * 1000);
-    }
-};
 
-app.utils.loadingBtnStop = function (id, value, result) {
-    var org = value;
-    var ID = $('#' + id);
-    ID.removeClass('loading').val(org);
-    if (result == 'success') {
-        app.utils.notify('Your question was asked successfully', 'success', 2);
-    } else {
-        app.utils.notify('{{error code}} Error message from server', 'error', 2);
-    }
-};
 
 app.utils.notify = function (text, type, duration) {
 
@@ -303,27 +196,9 @@ app.utils.notify = function (text, type, duration) {
             $('#alert-box').fadeOut().html('loading <a href="#" class="close">&times;</a>');
         }, duration * 1000);
     }
-    /*$(document).on('close.alert', function (event) {
-        $('#alert-hook').html('<div data-alert id="alert-box" class="alert-box-wrapper alert-box alert radius" style="display:none;"> Loading... <a href="#" class="close">&times;</a> </div>');
-    });*/
+    
 };
 
-app.utils.notifyLogin = function (text, type, duration) {
-
-
-    $('#alert-hook2').fadeIn();
-    $('#alert-box2').fadeIn().addClass(type).html(text + '<a href="#" class="close">&times;</a>');
-
-    // Types are: alert, success, warning, info
-    if (duration != 0) {
-        setTimeout(function () {
-            $('.alert-box').removeClass(type).fadeOut().html('loading <a href="#" class="close">&times;</a>');
-        }, duration * 1000);
-    }
-    $(document).on('close.alert', function (event) {
-        $('#alert-hook2').html('<div data-alert id="alert-box" class=" alert-box alert radius" style="display:none;"> Loading... <a href="#" class="close">&times;</a> </div>');
-    });
-};
 
 
 app.utils.internet = function () {
@@ -402,27 +277,6 @@ app.utils.btnStateChange = function (button, message, disabled) {
 
 };
 
-app.utils.btnUpvoteState = function (button, message, disabled) {
-    var $button = button;
-    var imgHtml = '<img src="/img/preloader.gif" class="left"/>' +
-        '<div class="inBtnState">' +
-        '</div>';
-
-
-    if (disabled) {
-        $button.addClass('fullbtn');
-        $button.html(imgHtml);
-        var $inBtnState = $button.find('.inBtnState');
-        $inBtnState.html(message);
-
-        $button.addClass('disabled');
-    } else {
-        $button.removeClass('fullbtn');
-        $button.removeClass('disabled');
-        $button.html(message);
-    }
-
-};
 
 app.utils.requestSerializer = function (method, url, params) {
     app.requestArgs.method = method;
@@ -457,15 +311,6 @@ app.utils.getFormData = function ($form) {
     delete formData['undefined'];
     return formData;
 };
-
-
-app.utils.goToByScroll = function (el) {
-    $('body').animate({
-            scrollTop: el.offsetTop
-        },
-        'slow');
-};
-
 
 /*app.utils.gallery = function(urls) {
 
@@ -785,48 +630,16 @@ app.$document.on('keyup', function (ev) {
 });
 app.behaviors.global = function () {
 
-  /**
-   * top level search box
-   */
-  // var headerHeight = $('.navbar').outerHeight();
-  // var marNegSearch = 200; //parseInt($('.search-box-banner').css('top'));
-  // var calc = headerHeight + marNegSearch;
-  // var scrollTop = app.$window.scrollTop();
-  //     if (scrollTop > 200 || app.pagename == 'profile') {
-  //       $('.search-box-nav').show();
-  //       //$('.search-box-banner').removeClass('search');
-  //       $('.mobile-brand-logo').hide();
-  //     }
-  //
-  //
-  // app.$document.ready(function(){
-  //   app.pagename = $('#panel').data('page-name');
-  //   if (app.pagename === 'homepage') {
-  //     app.utils.scrollLock($('.scroll-lock'));
-  //   };
-  //
-  //
-  // });
-  //
   app.$window.on("scroll", function(e) {
     var scrollTop = app.$window.scrollTop();
-        if (scrollTop > 600 || app.pagename == 'profile' /*calc/2*/) {
-            $('nav').addClass('navbar-fixed-top');
+        if (scrollTop > 600 ) {
 
         } else {
-          $('nav').removeClass('navbar-fixed-top');
 
         }
 
-    if (app.pagename === 'homepage') {
-      app.utils.scrollLock($('.scroll-lock'));
-    };
-
 
   });
-
-
-
 
 };
 
@@ -835,184 +648,34 @@ $(function(){
 });
 
 app.components.site = function($site) {
-  console.log('site');
-
-  // sample data
-
-var resumeData = {
-
-  "work": [
-  {
-  "company": "frankly.me",
-  "endDate": "2015-05-30",
-  "summery": "web intern",
-  "website": "http://frankly.me",
-  "position": "Intern",
-  "startDate": "2015-02-19",
-  "highlights": "widgets, html, bootstrap, angular, jquery"
-  },
-  {
-  "company": "frankly.me",
-  "endDate": "2015-09-30",
-  "summery": "nodejs, expressjs",
-  "website": "http://frankly.me",
-  "position": "web developer",
-  "startDate": "2015-07-01",
-  "highlights": "site, widgets, hiring panel, admin panel"
-  },
-  {
-  "company": "flatabout",
-  "startDate": "2015-10-01",
-  "endDate": "2015-11-30",
-  "summery": "Frontend",
-  "website": "http://flatabout.com",
-  "position": "full stack developer",
-  "highlights": "html, sass, jquery, nodejs, psql"
-  }
-  ],
-  "awards": [
-  {
-  "date": "2013-03-22",
-  "title": "representation",
-  "awarder": "SCRIET Cultural Society"
-  }
-  ],
-  "basics": {
-  "dob": "1993-09-15",
-  "name": "Satyam Yadav",
-  "email": "satyamyadav3@gmail.com",
-  "label": "Web Developer",
-  "mobile": "7376867678",
-  "summery": "I aspire to work in an environment demanding technical, programming , communication and functional expertise for facing and overcoming everyday challenges which require me to be up to date with the technology and continuously strive for enhancing my skills.",
-  "location": {
-  "pin": "110096",
-  "city": "Delhi",
-  "address": "Ashoknagar"
-  },
-  "profiles": [
-  {
-  "network": "facebook",
-  "username": "satyam.py"
-  },
-  {
-  "network": "github",
-  "username": "satyamyadav"
-  }
-  ]
-  },
-  "skills": [
-  {
-  "name": "Frontend",
-  "keywords": "html,css,javascript"
-  },
-  {
-  "name": "Backend",
-  "keywords": "Nodejs, python"
-  }
-  ],
-  "hobbies": "drawing, music",
-  "education": [
-  {
-  "gpa": "70",
-  "field": "Bachelor (Computer Science)",
-  "endDate": "2016-05-31",
-  "startDate": "2012-07-22",
-  "university": "C.C.S. University, Meerut",
-  "institution": "SCRIET"
-  },
-  {
-  "gpa": "62%",
-  "field": "Intermidate",
-  "endDate": "2010-03-30",
-  "startDate": "2009-03-30",
-  "university": "CBSE",
-  "institution": "Gyankunj Academy"
-  },
-  {
-  "gpa": "78%",
-  "field": "High School",
-  "endDate": "2008-03-05",
-  "startDate": "2005-03-05",
-  "university": "CBSE",
-  "institution": "St. Xavier's School Ballia"
-  }
-  ],
-  "references": [
-  {
-  "name": "me",
-  "reference": "enthusiastic"
-  }
-  ],
-  projects: [
-    {
-      title: "project title",
-      summery: "project summery",
-      images: ['img/projects/len-den-1.jpg']
-    },
-    {
-      title: "project title",
-      summery: "project summery",
-      images: ['img/projects/len-den-1.jpg']
-    },
-    {
-      title: "project title",
-      summery: "project summery",
-      images: ['img/projects/len-den-1.jpg']
-    },
-
-  ]
-}
-
-
-
 
 function displayData(data) {
-  // load template text
-  //var template = $('#template').html();
-  // complie template and bind context
 
-  app.utils.ajax.get('/views/main.html').then(function(tmpl){
-    //console.log(tmpl);
-    var el = document.createElement('div');
-    el.innerHTML = tmpl;
-    var template = $(el).find('#template').html();
-    //console.log(template);
+  app.utils.ajax.get('views/main.html').then(function(tmpl){
 
-  var compiled_html = _.template(tmpl)({
-    resume: data
-  });
-  // appent to body
-  $('body').append(compiled_html);
+    var compiled_html = _.template(tmpl)({
+      resume: data
+    });
+    // appent to body
+    $('body').prepend(compiled_html);
   });
 }
 
-
-  //render('main', resumeData);
 (function() {
-  displayData(resumeData);
+
+  app.utils.ajax.get('data/resume.json').then(function(data){
+    displayData(data);
+  });
 
   var $downloadResume = app.$body.find('.download-resume');
+  
+  $downloadResume.on('click', function (ev) {
+  ev.preventDefault();
+  
+  window.print();
 
-    $downloadResume.on('click', function (ev) {
-    ev.preventDefault();
-    console.log('click');
-    window.print();
-    $resume.printThis({
-        debug: false,               
-        importCSS: true,            
-        importStyle: true,         
-        printContainer: false,       
-        loadCSS: 'https://scrietossdg.herokuapp.com/css/site.css',  
-        removeInline: false,      
-        printDelay: 333,          
-        formValues: false          
-    });
-
-
-    });
+  });
 
 })();
-
-
 
 }; // end of script

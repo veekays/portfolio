@@ -1,0 +1,161 @@
+
+<div class="container white">
+  <div class="row resume-template-default">
+    <div class="col-sm-12 col-md-3 left-container">
+    <div class="row profile-label  padding-40">
+      <div class="col-xs-12">
+        <img class="img-responsive img-circle" src="img/logo.png">    
+      </div>
+      <div class="col-xs-12">
+        <h3><%= resume.basics.name %></h3>
+        <small><%= resume.basics.label %></small>
+      </div>
+    </div>
+    <div class="row profile-details">
+      <div class="col-xs-12">
+        <div class="list-group">
+          <a href="#" class="list-group-item">
+            <i class="fa fa-info btn-round"></i>
+            <h4 class="list-group-item-heading">About Me</h4>
+            <p class="list-group-item-text"><%= resume.basics.summery %></p>
+          </a>
+          <a href="#" class="list-group-item">
+            <i class="fa fa-info btn-round"></i>
+            <h4 class="list-group-item-heading">Contact Me</h4>
+            <address>
+              <strong>Shrama's House</strong><br>
+              <%= resume.basics.location.address %><br>
+              <%= resume.basics.location.city %>, <%= resume.basics.location.pin %><br>
+              <abbr title="Phone">P:</abbr> <%= resume.basics.mobile %>
+              <a href="mailto:<%= resume.basics.email %>"><%= resume.basics.email %></a>
+            </address>
+          </a>
+          
+          <a href="#" class="list-group-item">
+            <i class="fa fa-info btn-round"></i>
+            
+            <h4 class="list-group-item-heading">My Skills</h4>
+          </a>
+          <% _.forEach(resume.skills, function (skill, i) { %> 
+            
+            
+            <p class="list-group-item-text"><b><%= skill.name %>: </b><%= skill.keywords %></p>
+
+          <% }) %> 
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="col-sm-12 col-md-9 right-container margin-top-30">
+      
+      <div class="row margin-0">
+        <!-- Nav tabs -->
+        <div class="col-sm-12">
+          
+         <ul class="nav nav-tabs" role="tablist">
+           <li role="presentation" class="active"><a href="#portfolio" aria-controls="Portfolio" role="tab" data-toggle="tab">Portfolio</a></li>
+           <li role="presentation"><a href="#experience" aria-controls="experience" role="tab" data-toggle="tab">Experience</a></li>
+           <li role="presentation"><a href="#education" aria-controls="education" role="tab" data-toggle="tab">Education</a></li>
+           
+         </ul>
+        </div>
+
+       
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane fade in active" id="portfolio">
+
+
+        <% _.forEach(resume.projects, function(project){ %> 
+        <div class="col-sm-6">
+          <div class="flat-card">
+            <div class="flat-card-img">
+              <img class="img-responsive"src="<%= project.images[0] %>">
+            </div>
+            <div class="flat-card-heading">
+              <h3><%= project.title %></h3>
+            </div>
+            <div class="flat-card-body">
+              <p><%= project.summery %></p>
+            </div>
+          </div>                
+        </div>
+
+        <% }) %>
+        
+          </div>
+          <div role="tabpanel" class="tab-pane fade" id="experience">
+            <div class="row margin-0 text-center">
+              <% _.forEach(resume.work, function (profile, i) { %> 
+                <div class="col-sm-12 timeline-date"><%= resume.work[i].startDate %></div>
+                <div class="col-sm-12 timeline-content">
+                  <div class="flat-card">
+                    <div class="flat-card-img">
+                    </div>
+                    <div class="flat-card-heading">
+                      <h3><%= resume.work[i].company %></h3>
+                    <p><%= resume.work[i].website %></p>
+                    </div>
+                    <div class="flat-card-body">
+                      <h4><%= resume.work[i].position %></h4>
+                    <p class="padding-left-10"><%= resume.work[i].summery %></p>  
+                    <p class="padding-left-10"><%= resume.work[i].highlights %></p>
+                    </div>
+                  </div>
+                   
+                </div>
+                <div class="col-sm-12 timeline-date"><%= resume.work[i].endDate %></div>
+                
+              <% }) %>  
+            </div>  
+          </div>
+          <div role="tabpanel" class="tab-pane fade" id="education">
+          <div class="row margin-0">
+            <div class="col-sm-12">
+              <% _.forEach(resume.education, function (edu, i) { %> 
+
+                <div class="row margin-0">
+                  <div class="col-sm-12">
+
+                <h4>
+                  <strong><%= edu.institution %></strong>
+                </h4>
+
+                <b>
+                  <%= edu.university %>
+                </b>
+                    
+                  </div>
+
+                  <div class="col-sm-12">
+                    
+                    <div class="">
+                      <%= edu.endDate %>
+                      to
+                      <%= edu.startDate %>
+                    </div>
+                  </div>
+                </div>
+                <div class="row margin-0 padding-10 teal-text">
+
+                  <div class="col-sm-8">
+                    <%= edu.field %>
+                  </div>
+
+                  <div class="col-sm-4">
+                    <%= edu.gpa %>
+                  </div>
+                
+                </div>
+                <hr/>
+              <% }) %>  
+            </div>
+          </div>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+  </div>
+</div>

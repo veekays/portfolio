@@ -17,8 +17,6 @@ app.utils.site = function (path) {
     return [location.protocol, '//', location.host, '/', path].join('');
 };
 
-app.utils.runningVideos = [];
-
 app.utils.preloaderHtml = function () {
   return (
     '<div class="row text-center">'+
@@ -106,33 +104,7 @@ app.utils.$elRemoved = function (domNodeRemovedEvent, $el) {
     return $evTarget.get(0) === $el.get(0) || $.contains($evTarget.get(0), $el.get(0));
 };
 
-app.utils.loadingBtn = function (id, d) {
-    var ID = $('#' + id);
-    var org = ID.text();
-    var orgVal = ID.val();
-    ID.val("Processing...");
-    ID.text("Processing...");
-    ID.addClass('loading disabled');
-    //var ref=this;
-    if (d != 0) {
-        setTimeout(function () {
-            ID.removeClass('loading disabled');
-            ID.text(org);
-            //ID.val(orgVal);
-        }, d * 1000);
-    }
-};
 
-app.utils.loadingBtnStop = function (id, value, result) {
-    var org = value;
-    var ID = $('#' + id);
-    ID.removeClass('loading').val(org);
-    if (result == 'success') {
-        app.utils.notify('Your question was asked successfully', 'success', 2);
-    } else {
-        app.utils.notify('{{error code}} Error message from server', 'error', 2);
-    }
-};
 
 app.utils.notify = function (text, type, duration) {
 
@@ -148,27 +120,9 @@ app.utils.notify = function (text, type, duration) {
             $('#alert-box').fadeOut().html('loading <a href="#" class="close">&times;</a>');
         }, duration * 1000);
     }
-    /*$(document).on('close.alert', function (event) {
-        $('#alert-hook').html('<div data-alert id="alert-box" class="alert-box-wrapper alert-box alert radius" style="display:none;"> Loading... <a href="#" class="close">&times;</a> </div>');
-    });*/
+    
 };
 
-app.utils.notifyLogin = function (text, type, duration) {
-
-
-    $('#alert-hook2').fadeIn();
-    $('#alert-box2').fadeIn().addClass(type).html(text + '<a href="#" class="close">&times;</a>');
-
-    // Types are: alert, success, warning, info
-    if (duration != 0) {
-        setTimeout(function () {
-            $('.alert-box').removeClass(type).fadeOut().html('loading <a href="#" class="close">&times;</a>');
-        }, duration * 1000);
-    }
-    $(document).on('close.alert', function (event) {
-        $('#alert-hook2').html('<div data-alert id="alert-box" class=" alert-box alert radius" style="display:none;"> Loading... <a href="#" class="close">&times;</a> </div>');
-    });
-};
 
 
 app.utils.internet = function () {
@@ -247,27 +201,6 @@ app.utils.btnStateChange = function (button, message, disabled) {
 
 };
 
-app.utils.btnUpvoteState = function (button, message, disabled) {
-    var $button = button;
-    var imgHtml = '<img src="/img/preloader.gif" class="left"/>' +
-        '<div class="inBtnState">' +
-        '</div>';
-
-
-    if (disabled) {
-        $button.addClass('fullbtn');
-        $button.html(imgHtml);
-        var $inBtnState = $button.find('.inBtnState');
-        $inBtnState.html(message);
-
-        $button.addClass('disabled');
-    } else {
-        $button.removeClass('fullbtn');
-        $button.removeClass('disabled');
-        $button.html(message);
-    }
-
-};
 
 app.utils.requestSerializer = function (method, url, params) {
     app.requestArgs.method = method;
@@ -302,15 +235,6 @@ app.utils.getFormData = function ($form) {
     delete formData['undefined'];
     return formData;
 };
-
-
-app.utils.goToByScroll = function (el) {
-    $('body').animate({
-            scrollTop: el.offsetTop
-        },
-        'slow');
-};
-
 
 /*app.utils.gallery = function(urls) {
 
