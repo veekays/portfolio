@@ -110,19 +110,36 @@
   ],
   "projects": [
     {
-      "title": "project title",
-      "summery": "project summery",
-      "images": ["img/projects/len-den-1.jpg"]
+      "title": "$(this)",
+      "summery": "current page and site is client side rendered lodash template, jquery app and bootstrap sass. A json file and template is loaded with ajax and then compiled template is appended to body.",
+      "images": ["img/projects/len-den-1.jpg"],
+      "live_link": "http://satyamyadav.github.io/resume",
+      "code_link": "http://github.com/satyamyadav/resume",
+      "details": [
+        {
+          "Backend":"none",
+          "Server":"github's gh-pages",
+          "Frontend":"jquery lodash template rendering",
+          "Styling":"bootstrap sass",
+          "dev tools":"gulp, bower, npm"
+        }
+      ]
     },
     {
-      "title": "project title",
-      "summery": "project summery",
-      "images": ["img/projects/len-den-1.jpg"]
-    },
-    {
-      "title": "project title",
-      "summery": "project summery",
-      "images": ["img/projects/len-den-1.jpg"]
+      "title": "len-den",
+      "summery": "An app to list and calculate lended money | An app without signup and profile. Html string of components appended, local storage is used to save data.",
+      "images": ["img/projects/len-den-1.jpg"],
+      "live_link": "http://satyamyadav.github.io/len-den",
+      "code_link": "http://github.com/satyamyadav/len-den",
+      "details": [
+        {
+          "Backend":"none",
+          "Server":"github's gh-pages",
+          "Frontend":"jquery html string rendering",
+          "Styling":"materialize css",
+          "DB":"local storage"
+        }
+      ]
     }
 
   ]
