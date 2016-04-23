@@ -28,7 +28,7 @@
               Find Me
             </h4>
             <p class="list-group-item-text text-justified ">
-              <strong>Shrama's House</strong><br>
+              <strong><%= resume.basics.location.house %></strong><br>
               <%= resume.basics.location.address %><br>
               <%= resume.basics.location.city %>, <%= resume.basics.location.pin %><br>
               <abbr title="Phone"><i class="fa fa-mobile-phone margin-right-5"></i></abbr> <%= resume.basics.mobile %> <br />
@@ -93,69 +93,97 @@
         
           </div>
           <div role="tabpanel" class="tab-pane fade" id="experience">
-            <div class="row margin-0 text-center">
-              <% _.forEach(resume.work, function (profile, i) { %> 
-                <div class="col-sm-12 timeline-date"><%= resume.work[i].startDate %></div>
-                <div class="col-sm-12 timeline-content">
-                  <div class="flat-card">
-                    <div class="flat-card-img">
-                    </div>
-                    <div class="flat-card-heading">
-                      <h3><%= resume.work[i].company %></h3>
-                    <p><%= resume.work[i].website %></p>
-                    </div>
-                    <div class="flat-card-body">
-                      <h4><%= resume.work[i].position %></h4>
-                    <p class="padding-left-10"><%= resume.work[i].summery %></p>  
-                    <p class="padding-left-10"><%= resume.work[i].highlights %></p>
+            
+
+              <% _.forEach(resume.works, function(work, i) { %> 
+                    <% var startWork = work.startDate.split('-') %>
+                    <% var endWork = work.endDate.split('-') %>
+               
+                <div class="row margin-0">
+                  <div class="col-sm-2">
+                    <p class="teal-text text-lighten-2"><%= endWork[1] %>-<%= endWork[0] %></p>
+                    
+                  </div>
+                  <div class="col-sm-10">
+                    <span class="red lighten-3" style="width: 90%; height: 1.5px; display: block; position: absolute; left:-9%; margin-top: 1%"></span>
+                    
+                  </div>
+                
+                </div>
+                <div class="row margin-0">
+                  
+                  <div class="col-sm-12">
+                    
+                      <span class="zam-white margin-left-20" style="width: 3px; height: 100%; display: block; position: absolute;"></span>
+
+                    <div class="margin-left-40">
+                      <h4>
+                        <strong><%= work.position %></strong>
+                        <small>
+                          @<%= work.company %>
+                        </small>
+                      </h4>
+                      <div class="padding-left-10">
+                        
+                        <p class="brown-text text-lighten-3">
+                          <b> 
+                            <%= work.summery %>
+                          </b><br/>
+                          <%= work.highlights %>
+                        </p>
+                      </div>
                     </div>
                   </div>
-                   
+
+                </div>  
+                <div class="row margin-0  margin-bottom-10">
+                  <div class="col-sm-2">
+                    <p class="teal-text text-lighten-2 margin-top-10"><%= startWork[1] %>-<%= startWork[0] %></p>
+                    
+                  </div>
+                  <div class="col-sm-10">
+                    
+                    <span class="teal lighten-3" style="width: 90%; height: 1.5px; display: block; position: absolute; left:-9%; margin-top: 1%"></span>
+                  </div>
                 </div>
-                <div class="col-sm-12 timeline-date"><%= resume.work[i].endDate %></div>
-                
-              <% }) %>  
-            </div>  
+              <% }) %>
+
           </div>
           <div role="tabpanel" class="tab-pane fade" id="education">
           <div class="row margin-0">
             <div class="col-sm-12">
               <% _.forEach(resume.education, function (edu, i) { %> 
 
-                <div class="row margin-0">
-                  <div class="col-sm-12">
-
-                <h4>
-                  <strong><%= edu.institution %></strong>
-                </h4>
-
-                <b>
-                  <%= edu.university %>
-                </b>
-                    
+                <div class="row margin-0 margin-bottom-10">
+                  <div class="col-xs-2 col-sm-1 padding-top-10">
+                    <% var start = edu.startDate.split('-') %>
+                    <% var end = edu.endDate.split('-') %>
+                    <!-- <%= start[1] %>-<b><%= start[0] %></b>
+                    to
+                    <%= end[1] %>- -->
+                    <b class="teal-text text-lighten-2"><%= end[0] %></b>
+                    <span class="zam-white" style="width: 3px; height: 360%; display: block; position: absolute;"></span>
                   </div>
+                  <div class="col-xs-10 col-sm-11">
+                    <h4>
 
-                  <div class="col-sm-12">
-                    
-                    <div class="">
-                      <%= edu.endDate %>
-                      to
-                      <%= edu.startDate %>
+                      <strong><%= edu.class %></strong>
+                      <small><%= edu.field %></small>
+                    </h4>
+                    <div class="padding-left-10">
+                      
+                      <p class="brown-text text-lighten-3">
+                        <b> 
+                          <%= edu.university %>
+                        </b><br/>
+                        <%= edu.institution %>
+                      </p>
+                      <p><%= edu.gpa %></p>
                     </div>
                   </div>
-                </div>
-                <div class="row margin-0 padding-10 teal-text">
 
-                  <div class="col-sm-8">
-                    <%= edu.field %>
-                  </div>
-
-                  <div class="col-sm-4">
-                    <%= edu.gpa %>
-                  </div>
-                
                 </div>
-                <hr/>
+               
               <% }) %>  
             </div>
           </div>

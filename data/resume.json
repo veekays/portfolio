@@ -1,7 +1,7 @@
 
 {
 
-  "work": [
+  "works": [
   {
   "company": "frankly.me",
   "endDate": "2015-05-30",
@@ -46,6 +46,7 @@
   "whatsapp": "7376867678",
   "summery": "I aspire to work in an environment demanding technical, programming , communication and functional expertise for facing and overcoming everyday challenges which require me to be up to date with the technology and continuously strive for enhancing my skills.",
   "location": {
+  "house": "Shrama's House",
   "pin": "110096",
   "city": "Delhi",
   "address": "Ashoknagar"
@@ -74,8 +75,9 @@
   "hobbies": "drawing, music",
   "education": [
   {
-  "gpa": "70",
-  "field": "Bachelor (Computer Science)",
+  "gpa": "70%",
+  "field": "Computer Science",
+  "class": "B.tech",
   "endDate": "2016-05-31",
   "startDate": "2012-07-22",
   "university": "C.C.S. University, Meerut",
@@ -83,15 +85,17 @@
   },
   {
   "gpa": "62%",
-  "field": "Intermidate",
+  "field": "Science",
+  "class": "Intermidate",
   "endDate": "2010-03-30",
   "startDate": "2009-03-30",
   "university": "CBSE",
-  "institution": "Gyankunj Academy"
+  "institution": "Gyankunj Academy, Ballia"
   },
   {
   "gpa": "78%",
-  "field": "High School",
+  "field": "Science",
+  "class": "High School",
   "endDate": "2008-03-05",
   "startDate": "2005-03-05",
   "university": "CBSE",
