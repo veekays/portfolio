@@ -65,11 +65,21 @@
   "profiles": [
   {
   "network": "facebook",
-  "username": "satyam.py"
+  "username": "satyam.py",
+  "url": "https://www.facebook.com/satyam.py"
+
   },
   {
   "network": "github",
-  "username": "satyamyadav"
+  "username": "satyamyadav",
+  "url": "https://github.com/satyamyadav"
+  
+  },
+  {
+  "network": "linkedin",
+  "username": "satyamyadav",
+  "url": "https://www.linkedin.com/in/satyamyadav3"
+
   }
   ]
   },
