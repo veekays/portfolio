@@ -20,6 +20,14 @@
                Me
             </h4>
             <p class="list-group-item-text text-justified "><%= resume.basics.summery %></p>
+            <h5 class="list-group-item-heading">
+               Strength
+            </h5>
+            <p class="list-group-item-text text-justified "><%= resume.basics.strength %></p>
+            <h5 class="list-group-item-heading">
+               Weakness
+            </h5>
+            <p class="list-group-item-text text-justified "><%= resume.basics.weakness %></p>
           </a>
 
           <a href="#" class="list-group-item">
@@ -44,7 +52,7 @@
             </h4>
             <p class="list-group-item-text text-justified ">
               <% _.forEach(resume.skills, function (skill, i) { %> 
-                <b><%= skill.name %>: </b><%= skill.keywords %> <br />
+                <b><%= skill.name %>: </b><%= skill.keywords %> <br /><br />
               <% }) %> 
             </p>
           </a>
@@ -53,7 +61,7 @@
       </div>
     </div>
     </div>
-    <div class="col-sm-12 col-md-9 right-container margin-top-30">
+    <div class="col-sm-12 col-md-9 right-container margin-top-30 margin-bottom-30">
       
       <div class="row margin-0">
         <!-- Nav tabs -->
@@ -88,10 +96,10 @@
               <p>
                 <% _.forEach(project.details, function(d){ %> 
                 <%  _.pick(d, function(val, key){ %>
-                  <strong>
+                  <span class="grey-text ">
                     <%= key %> 
                     
-                  </strong> 
+                  </span> 
                     <%= val %><br/>
                 <%  }) %>
                 <% }) %>  
@@ -117,11 +125,11 @@
                     <% var endWork = work.endDate.split('-') %>
                
                 <div class="row">
-                  <div class="col-sm-2 col-xs-3">
+                  <div class="col-sm-2 col-xs-4">
                     <p class="teal-text text-lighten-2"><%= endWork[1] %>-<%= endWork[0] %></p>
                     
                   </div>
-                  <div class="col-sm-10 col-xs-9">
+                  <div class="col-sm-10 col-xs-8">
                     <span class="red lighten-3" style="width: 10%; height: 1.5px; display: block; position: absolute; left:-9%; margin-top: 8px"></span>
                     <small><%= work.startDate %> to <%= work.endDate %></small>
                     
@@ -136,30 +144,43 @@
 
                     <div class="margin-left-40">
                       <h4>
-                        <strong><%= work.position %></strong>
+                        <%= work.position %>
                         <small>
-                          @<%= work.company %>
+                          @
+                      <a class="" href="<%= work.website %>"><%= work.company %></a>
                         </small>
                       </h4>
-                      <div class="padding-left-10">
-                        
-                        <p class="brown-text text-lighten-3">
-                          <b> 
+                      <div class="padding-left-10 row">
+                        <div class="col-sm-6">
+                          <p class="grey-text text-darken-1">
                             <%= work.summery %>
-                          </b><br/>
-                          <%= work.highlights %>
-                        </p>
+                          </p>
+                          <p class=" purple-text text-lighten-3">
+                            <%= work.stack %><br />
+                          </p>
+                          <p class="blue-grey-text ">
+                            <%= work.team %>
+                          </p>
+                        </div>
+                        <div class="col-sm-6 pull-right">
+                          <p class="blue-grey-text">
+                            <b>Role: </b> <%= work.contribution %>
+                          </p>
+                          <p class="blue-grey-text text-darken-2">
+                            <b>Highlights: </b><%= work.highlights %>
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
 
                 </div>  
                 <div class="row  margin-bottom-10">
-                  <div class="col-sm-2 col-xs-3">
+                  <div class="col-sm-2 col-xs-4">
                     <p class="teal-text text-lighten-2 margin-top-10"><%= startWork[1] %>-<%= startWork[0] %></p>
                     
                   </div>
-                  <div class="col-sm-10 col-xs-9 padding-top-8">
+                  <div class="col-sm-10 col-xs-8 padding-top-8">
                     
                     <span class="teal lighten-3" style="width: 95%; height: 1.5px; display: block; position: absolute; left:-9%; margin-top: 10px"></span>
                     

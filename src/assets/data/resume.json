@@ -4,30 +4,39 @@
   "works": [
   {
   "company": "frankly.me",
+  "startDate": "2015-02-19",
   "endDate": "2015-05-30",
   "summery": "web intern",
   "website": "http://frankly.me",
   "position": "Intern",
-  "startDate": "2015-02-19",
-  "highlights": "widgets, html, bootstrap, angular, jquery"
+  "stack": "html, bootstrap, stylus, jquery, angularjs",
+  "team": "under three mentors and with BD team",
+  "contribution": "designed and developed embed widgets (iframe code), preview and get widgets page",
+  "highlights": "batch video widgets , answer widgets"
   },
   {
   "company": "frankly.me",
+  "startDate": "2015-07-01",
   "endDate": "2015-09-30",
-  "summery": "nodejs, expressjs",
+  "summery": "A social video micro blogging platform. A video twitter in a layman's language.",
   "website": "http://frankly.me",
   "position": "web developer",
-  "startDate": "2015-07-01",
-  "highlights": "site, widgets, hiring panel, admin panel"
+  "stack": "html, sass, jquery, nodejs",
+  "team": "12 members in frientend team",
+  "contribution": "developed widgets app on expressjs, a get widgets static page to generate script and responsive widgets",
+  "highlights": "video-comment widgets, web video recorder, hiring/audition widgets, hiring panel, admin(moderation) panel"
   },
   {
   "company": "flatabout",
   "startDate": "2015-10-01",
   "endDate": "2015-11-30",
-  "summery": "Frontend",
+  "summery": "Truecaller for addresses/Tripadvisor for real estate·",
   "website": "http://flatabout.com",
   "position": "full stack developer",
-  "highlights": "html, sass, jquery, nodejs, psql"
+  "stack": "html, sass, jquery, nodejs, psql",
+  "team": "worked from home",
+  "contribution": "contributed and implemented nodejs frameworks for frontend (expressjs and jquerry based) and backend (expressjs , postgres, ORM in javascript)",
+  "highlights": "integrated thumbor on lenode to nginx route for on demand custom image serving"
   }
   ],
   "awards": [
@@ -45,8 +54,10 @@
   "mobile": "9911194204",
   "whatsapp": "7376867678",
   "summery": "I aspire to work in an environment demanding technical, programming , communication and functional expertise for facing and overcoming everyday challenges which require me to be up to date with the technology and continuously strive for enhancing my skills.",
+  "strength": "self motivated self learner, open to learn anytime, can develop end to end applications (frontend, backend, deployment, tooling) to solve a realworld problem and can work continuously for solving it",
+  "weakness": "takes too much time to solve mathematical and algorithmic puzzles (have no practice), needs google (don't remember things)",
   "location": {
-  "house": "Shrama's House",
+  "house": "Sharma's House",
   "pin": "110096",
   "city": "Delhi",
   "address": "Ashoknagar"
@@ -65,11 +76,19 @@
   "skills": [
   {
   "name": "Frontend",
-  "keywords": "html,css,javascript"
+  "keywords": "html, css, javascript"
   },
   {
   "name": "Backend",
   "keywords": "Nodejs, python"
+  },
+  {
+  "name": "Frameworks",
+  "keywords": "expressjs, bootstrap, materializecss, jquery, angularjs, foundation, django"
+  },
+  {
+  "name": "Tools",
+  "keywords": "linux (ubuntu, fedora, debian), sublime, atom, git, bitbucket, heroku, openshift, compute engine, aws"
   }
   ],
   "hobbies": "drawing, music",
@@ -112,7 +131,7 @@
     {
       "title": "$(this)",
       "summery": "current page and site is client side rendered lodash template, jquery app and bootstrap sass. A json file and template is loaded with ajax and then compiled template is appended to body.",
-      "images": ["img/projects/len-den-1.jpg"],
+      "images": ["img/projects/resume-1.png"],
       "live_link": "http://satyamyadav.github.io/resume",
       "code_link": "http://github.com/satyamyadav/resume",
       "details": [
@@ -120,6 +139,22 @@
           "Backend":"none",
           "Server":"github's gh-pages",
           "Frontend":"jquery lodash template rendering",
+          "Styling":"bootstrap sass",
+          "dev tools":"gulp, bower, npm"
+        }
+      ]
+    },
+    {
+      "title": "code-together",
+      "summery": "A project and idea sharing web portal for college students, expressjs server with postgres tabel (knex wrapper orm), a expressjs microserver to render frontend written in ejs(partials) and jquery (components) working as single page app",
+      "images": ["img/projects/ossdg-1.png"],
+      "live_link": "http://scrietossdg.herokuapp.com",
+      "code_link": "sorry-code-is-on-bitbucket",
+      "details": [
+        {
+          "Backend":"expressjs postgresql",
+          "Server":"heroku",
+          "Frontend":"expressjs microserver, ejs, jquery",
           "Styling":"bootstrap sass",
           "dev tools":"gulp, bower, npm"
         }
