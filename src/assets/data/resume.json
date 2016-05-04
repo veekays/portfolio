@@ -77,7 +77,7 @@
   },
   {
   "network": "linkedin",
-  "username": "satyamyadav",
+  "username": "satyamyadav3",
   "url": "https://www.linkedin.com/in/satyamyadav3"
 
   }
@@ -139,7 +139,7 @@
   ],
   "projects": [
     {
-      "title": "$(this)",
+      "title": "my-resume",
       "summery": "current page and site is client side rendered lodash template, jquery app and bootstrap sass. A json file and template is loaded with ajax and then compiled template is appended to body.",
       "images": ["img/projects/resume-1.png"],
       "live_link": "http://satyamyadav.github.io/resume",
@@ -155,7 +155,7 @@
       ]
     },
     {
-      "title": "code-together",
+      "title": "learn-together",
       "summery": "A project and idea sharing web portal for college students, expressjs server with postgres tabel (knex wrapper orm), a expressjs microserver to render frontend written in ejs(partials) and jquery (components) working as single page app",
       "images": ["img/projects/ossdg-1.png"],
       "live_link": "http://scrietossdg.herokuapp.com",

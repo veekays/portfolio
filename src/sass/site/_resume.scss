@@ -67,73 +67,7 @@
 
 @media print {
 
-	body {
-		background-color: #fffde7 !important
-	}
-
-	.hidden-print {
-		height: 0px !important;
-		width: 0px !important;
-		display: none;
-	}
-
-
-
-	.resume-template-default {
-
-		padding: 0px !important;
-		margin: -50px !important;
-		margin-top: -100px !important;
-
-	.col-md-7 {
-		width: 55%;
-		float: left;
-	}
-	.col-md-5 {
-		width: 45%;
-		float: left;
-
-	}
-
-	.btn-square {
-    width: 35px;
-	}
-	.teal {
-	    background-color: #4db6ac !important;
-	}
-
-	.teal-text {
-    color: #009688 !important;
-	}
-
-	.btn-square {
-	    border: none;
-	    border-radius: 0;
-	}
-
-	h3, .h3 {
-    font-size: 24px;
-	}
-	h1, .h1, h2, .h2, h3, .h3 {
-	    margin-top: 20px;
-	    margin-bottom: 10px;
-	}
-	h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-	    font-family: inherit;
-	    font-weight: 500;
-	    line-height: 1.1;
-	    color: inherit;
-	}
-
-	h4, .h4 {
-    font-size: 18px;
-	}
-	h4, .h4, h5, .h5, h6, .h6 {
-	    margin-top: 10px;
-	    margin-bottom: 10px;
-	}
-
-}
+	
 
 }
 

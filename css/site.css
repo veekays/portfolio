@@ -19868,49 +19868,6 @@ body.mini-navbar .navbar-static-side {
 @media (min-width: 1200px) {
   .resume-template-default {
     width: 1100px; } }
-@media print {
-  body {
-    background-color: #fffde7 !important; }
-
-  .hidden-print {
-    height: 0px !important;
-    width: 0px !important;
-    display: none; }
-
-  .resume-template-default {
-    padding: 0px !important;
-    margin: -50px !important;
-    margin-top: -100px !important; }
-    .resume-template-default .col-md-7 {
-      width: 55%;
-      float: left; }
-    .resume-template-default .col-md-5 {
-      width: 45%;
-      float: left; }
-    .resume-template-default .btn-square {
-      width: 35px; }
-    .resume-template-default .teal {
-      background-color: #4db6ac !important; }
-    .resume-template-default .teal-text {
-      color: #009688 !important; }
-    .resume-template-default .btn-square {
-      border: none;
-      border-radius: 0; }
-    .resume-template-default h3, .resume-template-default .h3 {
-      font-size: 24px; }
-    .resume-template-default h1, .resume-template-default .h1, .resume-template-default h2, .resume-template-default .h2, .resume-template-default h3, .resume-template-default .h3 {
-      margin-top: 20px;
-      margin-bottom: 10px; }
-    .resume-template-default h1, .resume-template-default h2, .resume-template-default h3, .resume-template-default h4, .resume-template-default h5, .resume-template-default h6, .resume-template-default .h1, .resume-template-default .h2, .resume-template-default .h3, .resume-template-default .h4, .resume-template-default .h5, .resume-template-default .h6 {
-      font-family: inherit;
-      font-weight: 500;
-      line-height: 1.1;
-      color: inherit; }
-    .resume-template-default h4, .resume-template-default .h4 {
-      font-size: 18px; }
-    .resume-template-default h4, .resume-template-default .h4, .resume-template-default h5, .resume-template-default .h5, .resume-template-default h6, .resume-template-default .h6 {
-      margin-top: 10px;
-      margin-bottom: 10px; } }
 #timeline {
   position: relative;
   padding: 2em 0;
