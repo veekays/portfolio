@@ -4,28 +4,28 @@
   "start_url": "/",  
   "icons": [
     {
-      "src": "img/fb-meta-img.png",
+      "src": "img/logo.png",
       "sizes": "196x196",
       "type": "image/png"
     },
     {
-      "src": "img/fb-meta-img.png",
+      "src": "img/logo.png",
       "sizes": "296x296",
       "type": "image/png"
     },
     {
-      "src": "img/fb-meta-img.png",
+      "src": "img/logo.png",
       "sizes": "496x496",
       "type": "image/png"
     },
     {
-      "src": "img/fb-meta-img.png",
+      "src": "img/logo.png",
       "sizes": "696x696",
       "type": "image/png"
     }
   ],
   "background_color": "#00969C",
-  "theme_color": "#383C40", 
+  "theme_color": "red", 
   "display": "fullscreen",  
   "orientation": "portrait"
 }

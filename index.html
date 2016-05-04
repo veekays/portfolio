@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="img/logo.png">
+    <link rel="manifest" href="data/manifest.json">
     <title> Satyam Yadav </title>
 
     <!-- Bootstrap -->
@@ -21,15 +24,6 @@
   </head>
   <body class="zam-grey">
 
-
-    <!-- button download PDF -->
-    <div class="text-center hidden-print padding-25">
-      <a href="#" title="Donwload Resume PDF" class="btn btn-primary-outline btn-long download-resume white-text">
-        <i class="fa fa-download white-text"></i>&nbsp; Download PDF
-      </a>
-    </div><!--/ button download PDF -->
-
-
   
     <script src="js/site.js"></script>
     
@@ -38,6 +32,15 @@
         app.components.site($('body'));
       });
     </script>
+
+
+    <!-- button download PDF -->
+    <div class="text-center hidden-print padding-25">
+      <a href="#" title="Donwload Resume PDF" class="btn btn-primary-outline btn-long download-resume white-text">
+        <i class="fa fa-download white-text"></i>&nbsp; Download PDF
+      </a>
+    </div><!--/ button download PDF -->
+
 
   </body>
 </html>
