@@ -1,7 +1,7 @@
 {
-  "short_name": "complex-frontend",
-  "name": "complex frontend ",
-  "start_url": "/",  
+  "short_name": "satyam yadav",
+  "name": "satyam's resume ",
+  "start_url": "/resume",  
   "icons": [
     {
       "src": "img/logo.png",
@@ -24,8 +24,8 @@
       "type": "image/png"
     }
   ],
-  "background_color": "#00969C",
-  "theme_color": "red", 
+  "background_color": "#31475A",
+  "theme_color": "#31475A", 
   "display": "fullscreen",  
   "orientation": "portrait"
 }
