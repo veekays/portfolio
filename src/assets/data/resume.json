@@ -34,9 +34,9 @@
   "website": "http://flatabout.com",
   "position": "full stack developer",
   "stack": "html, sass, jquery, nodejs, psql",
-  "team": "worked from home",
-  "contribution": "contributed and implemented nodejs frameworks for frontend (expressjs and jquerry based) and backend (expressjs , postgres, ORM in javascript)",
-  "highlights": "integrated thumbor on lenode to nginx route for on demand custom image serving"
+  "team": "remote location",
+  "contribution": "Inherited existing infrastructure powering Flatabout's mobile app , with restful APIs written in node.js. The tech stack included custom framework with custom table gateway over top of express.js and using kne.js for table gateway. Responsibilities included , building a new web interface for Flatabout and working on the existing backend infrastructure towards adding new features as per the initial evolution of the business idea.",
+  "highlights": "Rolled out my own framework on top of express.js , consuming rest APIs on server to build server rendered single page app That provides the look and feel of using modern single page app development frameworks like angularjs, ember etc. And with ability to retain easy and regular seo optimization as required by young business idea to gain traction through every channel And on the front-end side rising regular jqury. integrated thumbor on lenode to nginx route for on demand custom image serving."
   }
   ],
   "awards": [
