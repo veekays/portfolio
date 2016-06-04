@@ -10,7 +10,6 @@
     <title> Satyam Yadav </title>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/site.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <script src="js/vendor.js"></script>
@@ -23,54 +22,14 @@
     <![endif]-->
   </head>
   <body class="zam-grey">
-    <div id="overlay">
-           <div id="progstat"></div>
-           <div id="progress"></div>
-       </div>
-    <script>
-       
-       (function() {
-           function id(v) {
-               return document.getElementById(v);
-           }
 
-           function loadbar() {
-               var ovrl = id("overlay"),
-                   prog = id("progress"),
-                   stat = id("progstat"),
-                   img = document.images,
-                   c = 0,
-                   tot = img.length;
-               if (tot == 0) return doneLoading();
-               var loadTexts = ['Waking up the developers...', 'We are not doctors, but you be patient...', 'Don\'t look back, don\'t look up either...'];
-               var loadText = loadTexts[Math.floor(Math.random() * loadTexts.length)];
-               stat.innerHTML = loadText;
-
-               function imgLoaded() {
-                   c += 1;
-                   var perc = ((100 / tot * c) << 0) + "%";
-                   prog.style.width = perc;
-                   if (c === tot) return doneLoading();
-               }
-
-               function doneLoading() {
-                   ovrl.style.opacity = 0;
-                   setTimeout(function() {
-                       ovrl.style.display = "none";
-                   }, 1200);
-               }
-               for (var i = 0; i < tot; i++) {
-                   var tImg = new Image();
-                   tImg.onload = imgLoaded;
-                   tImg.onerror = imgLoaded;
-                   tImg.src = img[i].src;
-               }
-           }
-           document.addEventListener('DOMContentLoaded', loadbar, false);
-       }())
-       </script>
-
-  
+    <!-- button download PDF -->
+    <div class="text-center hidden-print padding-25">
+      <a href="#" title="Donwload Resume PDF" class="btn btn-primary-outline btn-long download-resume white-text">
+        <i class="fa fa-download white-text"></i>&nbsp; <span>Loading</span>
+      </a>
+    </div><!--/ button download PDF -->
+      
     <script src="js/site.js"></script>
     
     <script type="text/javascript">
@@ -79,13 +38,6 @@
       });
     </script>
 
-
-    <!-- button download PDF -->
-    <div class="text-center hidden-print padding-25">
-      <a href="#" title="Donwload Resume PDF" class="btn btn-primary-outline btn-long download-resume white-text">
-        <i class="fa fa-download white-text"></i>&nbsp; Download PDF
-      </a>
-    </div><!--/ button download PDF -->
 
 
   </body>

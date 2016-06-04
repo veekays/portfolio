@@ -37,7 +37,7 @@
             <p class="list-group-item-text text-justified "><%= resume.basics.weakness %></p>
           </a>
 
-          <a href="#" class="list-group-item">
+          <div href="#" class="list-group-item">
             <h4 class="list-group-item-heading">
               <i class="fa fa-phone"></i>
               Find Me
@@ -48,9 +48,10 @@
               <%= resume.basics.location.city %>, <%= resume.basics.location.pin %><br>
               <abbr title="Phone"><i class="fa fa-mobile-phone margin-right-5"></i></abbr> <%= resume.basics.mobile %> <br />
               <abbr title="whatsapp"><i class="fa fa-whatsapp margin-right-5"></i></abbr> <%= resume.basics.whatsapp %> <br />
-               <i class="fa fa-envelope-o margin-right-5"></i><%= resume.basics.email %> 
+               <a class="list-group-item-text text-justified yellow-text text-lighten-5" href="mailto:<%= resume.basics.email %>" target="_top"><i class="fa fa-envelope-o margin-right-5"></i><%= resume.basics.email %></a>
+                
             </p>
-          </a>
+          </div>
           
           <a href="#" class="list-group-item">
             <h4 class="list-group-item-heading">

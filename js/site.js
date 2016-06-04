@@ -649,6 +649,49 @@ $(function(){
 
 app.components.site = function($site) {
 
+  
+  (function() {
+      function id(v) {
+          return document.getElementById(v);
+      }
+
+      function loadbar() {
+          var ovrl = id("overlay"),
+              prog = id("progress"),
+              stat = id("progstat"),
+              img = 1,//document.images,
+              c = 0,
+              tot = img.length;
+          if (tot == 0) return doneLoading();
+          var loadTexts = ['Waking up the developers...', 'We are not doctors, but you be patient...', 'Don\'t look back, don\'t look up either...'];
+          var loadText = loadTexts[Math.floor(Math.random() * loadTexts.length)];
+          stat.innerHTML = loadText;
+
+          function imgLoaded() {
+              c += 1;
+              var perc = ((100 / tot * c) << 0) + "%";
+              prog.style.width = perc;
+              if (c === tot) return doneLoading();
+          }
+
+          function doneLoading() {
+              ovrl.style.opacity = 0;
+              setTimeout(function() {
+                  ovrl.style.display = "none";
+              }, 1200);
+          }
+          for (var i = 0; i < tot; i++) {
+              var tImg = new Image();
+              tImg.onload = imgLoaded;
+              tImg.onerror = imgLoaded;
+              tImg.src = img[i].src;
+          }
+      }
+      document.addEventListener('DOMContentLoaded', loadbar, false);
+  }())  
+
+var $downloadResume = app.$body.find('.download-resume');
+
 function displayData(data) {
 
   app.utils.ajax.get('views/main.html').then(function(tmpl){
@@ -667,8 +710,7 @@ function displayData(data) {
     displayData(data);
   });
 
-  var $downloadResume = app.$body.find('.download-resume');
-  
+  $downloadResume.find('span').html('download Resume');
   $downloadResume.on('click', function (ev) {
   ev.preventDefault();
   

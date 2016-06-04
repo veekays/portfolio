@@ -1,5 +1,7 @@
 app.components.site = function($site) {
 
+var $downloadResume = app.$body.find('.download-resume');
+
 function displayData(data) {
 
   app.utils.ajax.get('views/main.html').then(function(tmpl){
@@ -18,8 +20,7 @@ function displayData(data) {
     displayData(data);
   });
 
-  var $downloadResume = app.$body.find('.download-resume');
-  
+  $downloadResume.find('span').html('download Resume');
   $downloadResume.on('click', function (ev) {
   ev.preventDefault();
   

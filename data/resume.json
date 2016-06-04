@@ -90,7 +90,7 @@
   },
   {
   "name": "Backend",
-  "keywords": "Nodejs, python"
+  "keywords": "Nodejs"
   },
   {
   "name": "Frameworks",
@@ -104,7 +104,7 @@
   "hobbies": "drawing, music",
   "education": [
   {
-  "gpa": "70%",
+  "gpa": "65%",
   "field": "Computer Science",
   "class": "B.tech",
   "endDate": "2016-05-31",
@@ -138,6 +138,24 @@
   }
   ],
   "projects": [
+    
+    {
+      "title": "learn-together",
+      "summery": "A project and idea sharing web portal for college students, expressjs server with postgres tabel (knex wrapper orm), a expressjs microserver to render frontend written in ejs(partials) and jquery (components) working as single page app",
+      "images": ["img/projects/ossdg-1.png"],
+      "live_link": "http://learn-together.herokuapp.com",
+      "code_link": "https://github.com/satyamyadav/lt-frontend",
+      "details": [
+        {
+          "Backend":"expressjs postgresql",
+          "Server":"heroku",
+          "Frontend":"expressjs microserver, ejs, jquery",
+          "Styling":"bootstrap sass",
+          "dev tools":"gulp, bower, npm"
+        }
+      ]
+    },
+
     {
       "title": "my-resume",
       "summery": "current page and site is client side rendered lodash template, jquery app and bootstrap sass. A json file and template is loaded with ajax and then compiled template is appended to body.",
@@ -154,22 +172,7 @@
         }
       ]
     },
-    {
-      "title": "learn-together",
-      "summery": "A project and idea sharing web portal for college students, expressjs server with postgres tabel (knex wrapper orm), a expressjs microserver to render frontend written in ejs(partials) and jquery (components) working as single page app",
-      "images": ["img/projects/ossdg-1.png"],
-      "live_link": "http://scrietossdg.herokuapp.com",
-      "code_link": "sorry-code-is-on-bitbucket",
-      "details": [
-        {
-          "Backend":"expressjs postgresql",
-          "Server":"heroku",
-          "Frontend":"expressjs microserver, ejs, jquery",
-          "Styling":"bootstrap sass",
-          "dev tools":"gulp, bower, npm"
-        }
-      ]
-    },
+    
     {
       "title": "len-den",
       "summery": "An app to list and calculate lended money | An app without signup and profile. Html string of components appended, local storage is used to save data.",
