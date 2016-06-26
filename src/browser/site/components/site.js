@@ -16,9 +16,25 @@ function displayData(data) {
 
 (function() {
 
-  app.utils.ajax.get('data/resume.json').then(function(data){
-    displayData(data);
-  });
+
+  if(typeof(Storage) !== "undefined") {
+    var resumeData = {};
+          // Code for localStorage/sessionStorage.
+    if (localStorage.resumeData) {
+      console.log('mila')
+      resumeData = JSON.parse(window.localStorage.getItem('resumeData'));
+      displayData(resumeData);
+    } else {
+      console.log('nahi mila')
+      app.utils.ajax.get('data/resume.json').then(function(data){
+        localStorage.setItem('resumeData', JSON.stringify(data));
+        displayData(data);
+      });
+    }
+  } else {
+      // Sorry! No Web Storage support..
+  }
+
 
   $downloadResume.find('span').html('download Resume');
   $downloadResume.on('click', function (ev) {

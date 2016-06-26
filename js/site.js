@@ -649,47 +649,6 @@ $(function(){
 
 app.components.site = function($site) {
 
-  
-  (function() {
-      function id(v) {
-          return document.getElementById(v);
-      }
-
-      function loadbar() {
-          var ovrl = id("overlay"),
-              prog = id("progress"),
-              stat = id("progstat"),
-              img = 1,//document.images,
-              c = 0,
-              tot = img.length;
-          if (tot == 0) return doneLoading();
-          var loadTexts = ['Waking up the developers...', 'We are not doctors, but you be patient...', 'Don\'t look back, don\'t look up either...'];
-          var loadText = loadTexts[Math.floor(Math.random() * loadTexts.length)];
-          stat.innerHTML = loadText;
-
-          function imgLoaded() {
-              c += 1;
-              var perc = ((100 / tot * c) << 0) + "%";
-              prog.style.width = perc;
-              if (c === tot) return doneLoading();
-          }
-
-          function doneLoading() {
-              ovrl.style.opacity = 0;
-              setTimeout(function() {
-                  ovrl.style.display = "none";
-              }, 1200);
-          }
-          for (var i = 0; i < tot; i++) {
-              var tImg = new Image();
-              tImg.onload = imgLoaded;
-              tImg.onerror = imgLoaded;
-              tImg.src = img[i].src;
-          }
-      }
-      document.addEventListener('DOMContentLoaded', loadbar, false);
-  }())  
-
 var $downloadResume = app.$body.find('.download-resume');
 
 function displayData(data) {
@@ -706,9 +665,25 @@ function displayData(data) {
 
 (function() {
 
-  app.utils.ajax.get('data/resume.json').then(function(data){
-    displayData(data);
-  });
+
+  if(typeof(Storage) !== "undefined") {
+    var resumeData = {};
+          // Code for localStorage/sessionStorage.
+    if (localStorage.resumeData) {
+      console.log('mila')
+      resumeData = JSON.parse(window.localStorage.getItem('resumeData'));
+      displayData(resumeData);
+    } else {
+      console.log('nahi mila')
+      app.utils.ajax.get('data/resume.json').then(function(data){
+        localStorage.setItem('resumeData', JSON.stringify(data));
+        displayData(data);
+      });
+    }
+  } else {
+      // Sorry! No Web Storage support..
+  }
+
 
   $downloadResume.find('span').html('download Resume');
   $downloadResume.on('click', function (ev) {
