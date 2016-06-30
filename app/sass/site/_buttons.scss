@@ -21,18 +21,16 @@
   padding: 6px 32px;
 }
 
-.scroll-top-btn {
+.btn-float {
   background-color: #fff;
   position:fixed;
   bottom:20px;
   right:3%;
   z-index:100;
   font-size:17px;
+      
 }
 
-.scroll-top-btn:hover {
-  background-color: #e2e2e2;
-}
   
 @media only screen and (max-width: 767px) {
   .scroll-top-btn {
@@ -44,17 +42,6 @@
   }
 }
 
-.btn-zam {
-  background-color: $zam-blue;
-  border-color: #c2c2c2;
-  color: #fff;
-  &:hover,
-  &:active,
-  &:focus {
-    background-color: #fff;
-    border-color: $zam-blue;
-    color: $zam-blue;
-  }
-}
+
 
 

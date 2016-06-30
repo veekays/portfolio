@@ -1,6 +1,58 @@
 
 {
 
+  "basics": {
+    
+    "avatar": "public/img/logo.png",
+    
+    "dob": "1993-09-15",
+    
+    "name": "Satyam Yadav",
+    
+    "email": "satyamyadav3@gmail.com",
+    
+    "label": "Web Developer",
+    
+    "mobile": "9911194204",
+    
+    "whatsapp": "7376867678",
+    
+    "summery": "I aspire to work in an environment demanding technical, programming , communication and functional expertise for facing and overcoming everyday challenges which require me to be up to date with the technology and continuously strive for enhancing my skills.",
+    
+    "strength": "self motivated self learner, open to learn anytime, can develop end to end applications (frontend, backend, deployment, tooling) to solve a realworld problem and can work continuously for solving it",
+    
+    "weakness": "takes too much time to solve mathematical and algorithmic puzzles (have no practice), needs google (don't remember things)",
+    
+    "location": {
+      "house": "Sharma's House",
+      "pin": "110096",
+      "city": "Delhi",
+      "address": "Ashoknagar"
+    },
+    
+    "profiles": [
+    
+      {
+        "network": "facebook",
+        "username": "satyam.py",
+        "url": "https://www.facebook.com/satyam.py"
+
+      },
+      {
+        "network": "github",
+        "username": "satyamyadav",
+        "url": "https://github.com/satyamyadav"
+      
+      },
+      {
+        "network": "linkedin",
+        "username": "satyamyadav3",
+        "url": "https://www.linkedin.com/in/satyamyadav3"
+
+      }
+    ]
+  },
+
   "works": [
   {
   "company": "frankly.me",
@@ -46,43 +98,7 @@
   "awarder": "SCRIET Cultural Society"
   }
   ],
-  "basics": {
-  "dob": "1993-09-15",
-  "name": "Satyam Yadav",
-  "email": "satyamyadav3@gmail.com",
-  "label": "Web Developer",
-  "mobile": "9911194204",
-  "whatsapp": "7376867678",
-  "summery": "I aspire to work in an environment demanding technical, programming , communication and functional expertise for facing and overcoming everyday challenges which require me to be up to date with the technology and continuously strive for enhancing my skills.",
-  "strength": "self motivated self learner, open to learn anytime, can develop end to end applications (frontend, backend, deployment, tooling) to solve a realworld problem and can work continuously for solving it",
-  "weakness": "takes too much time to solve mathematical and algorithmic puzzles (have no practice), needs google (don't remember things)",
-  "location": {
-  "house": "Sharma's House",
-  "pin": "110096",
-  "city": "Delhi",
-  "address": "Ashoknagar"
-  },
-  "profiles": [
-  {
-  "network": "facebook",
-  "username": "satyam.py",
-  "url": "https://www.facebook.com/satyam.py"
 
-  },
-  {
-  "network": "github",
-  "username": "satyamyadav",
-  "url": "https://github.com/satyamyadav"
-  
-  },
-  {
-  "network": "linkedin",
-  "username": "satyamyadav3",
-  "url": "https://www.linkedin.com/in/satyamyadav3"
-
-  }
-  ]
-  },
   "skills": [
   {
   "name": "Frontend",
@@ -142,7 +158,7 @@
     {
       "title": "learn-together",
       "summery": "A project and idea sharing web portal for college students, expressjs server with postgres tabel (knex wrapper orm), a expressjs microserver to render frontend written in ejs(partials) and jquery (components) working as single page app",
-      "images": ["img/projects/ossdg-1.png"],
+      "images": ["public/img/projects/ossdg-1.png"],
       "live_link": "http://learn-together.herokuapp.com",
       "code_link": "https://github.com/satyamyadav/lt-frontend",
       "details": [
@@ -159,7 +175,7 @@
     {
       "title": "my-resume",
       "summery": "current page and site is client side rendered lodash template, jquery app and bootstrap sass. A json file and template is loaded with ajax and then compiled template is appended to body.",
-      "images": ["img/projects/resume-1.png"],
+      "images": ["public/img/projects/resume-1.png"],
       "live_link": "http://satyamyadav.github.io/resume",
       "code_link": "http://github.com/satyamyadav/resume",
       "details": [
@@ -176,7 +192,7 @@
     {
       "title": "len-den",
       "summery": "An app to list and calculate lended money | An app without signup and profile. Html string of components appended, local storage is used to save data.",
-      "images": ["img/projects/len-den-1.jpg"],
+      "images": ["public/img/projects/len-den-1.jpg"],
       "live_link": "http://satyamyadav.github.io/len-den",
       "code_link": "http://github.com/satyamyadav/len-den",
       "details": [

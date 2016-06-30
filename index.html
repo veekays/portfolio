@@ -5,23 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="mobile-web-app-capable" content="yes">
-    <link rel="icon" sizes="192x192" href="img/logo.png">
-    <link rel="manifest" href="data/manifest.json">
-    <title> Satyam Yadav </title>
+    <link rel="icon" sizes="192x192" href="public/img/logo.png">
+    <link rel="manifest" href="public/data/manifest.json">
+    <title> sam-resume </title>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="css/site.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <script src="js/vendor.js"></script>
+    <link rel="stylesheet" href="public/css/site.css">
+    <link rel="stylesheet" href="public/css/font-awesome.min.css">
+    <script src="public/js/vendor.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond/js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
   <body class="zam-grey">
+
+    <div id="main-app"></div>
 
     <!-- button download PDF -->
     <div class="text-center hidden-print padding-25">
@@ -29,8 +31,20 @@
         <i class="fa fa-download white-text"></i>&nbsp; <span>Loading</span>
       </a>
     </div><!--/ button download PDF -->
+
+    <div class="btn-round btn-float settings-button">
       
-    <script src="js/site.js"></script>
+      <script type="text/javascript">
+        $(function(){
+          app.components.settingsBtn($('.settings-button'));
+        });
+      </script>
+
+      <i class="fa fa-wrench fa-2x margin-top-3 margin-bottom-3 red-text"></i>
+      
+    </div>
+      
+    <script src="public/js/site.js"></script>
     
     <script type="text/javascript">
       $(function(){
@@ -38,7 +52,8 @@
       });
     </script>
 
-
+    <div class="modal" id="resumeModal" role="dialog" aria-labelledby="projectModalBox">
+    </div>
 
   </body>
 </html>

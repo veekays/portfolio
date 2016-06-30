@@ -13995,6 +13995,9 @@ button.close {
 .link-text {
   color: #56BDE8; }
 
+.pre-wrap {
+  white-space: pre-line; }
+
 /*!
 Animate.css - http://daneden.me/animate
 Licensed under the MIT license
@@ -16636,7 +16639,7 @@ body.mini-navbar .navbar-static-side {
 .btn-long {
   padding: 6px 32px; }
 
-.scroll-top-btn {
+.btn-float {
   background-color: #fff;
   position: fixed;
   bottom: 20px;
@@ -16644,24 +16647,12 @@ body.mini-navbar .navbar-static-side {
   z-index: 100;
   font-size: 17px; }
 
-.scroll-top-btn:hover {
-  background-color: #e2e2e2; }
-
 @media only screen and (max-width: 767px) {
   .scroll-top-btn {
     margin-bottom: 3px;
     right: 3px;
     border-radius: 0;
     border-top-left-radius: 3px; } }
-.btn-zam {
-  background-color: #56BDE8;
-  border-color: #c2c2c2;
-  color: #fff; }
-  .btn-zam:hover, .btn-zam:active, .btn-zam:focus {
-    background-color: #fff;
-    border-color: #56BDE8;
-    color: #56BDE8; }
-
 .default-list .list-item {
   position: relative;
   display: block;

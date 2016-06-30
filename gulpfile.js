@@ -16,7 +16,7 @@ var apps = require('./package').apps;
 var devMode = process.env.NODE_ENV !== 'production';
 
 var dest = function (path, raw) {
-  var dest = !!path ? __dirname + '/' + path : __dirname + '/';
+  var dest = !!path ? __dirname + '/public/' + path : __dirname + '/public/';
   return raw === true ? dest : gulp.dest(dest);
 };
 
@@ -73,7 +73,7 @@ gulp.task('bower', function () {
 gulp.task('sass', function () {
   var buildStyle = function (style) {
     if (style == 'site') {
-      exec('sass ' + __dirname + '/src/sass/' + style + '.scss ' + __dirname + '/css/' + style + '.css', function (err) {
+      exec('sass ' + __dirname + '/app/sass/' + style + '.scss ' + __dirname + '/public/css/' + style + '.css', function (err) {
         if (err) {
           console.log(err);
         }
@@ -88,7 +88,7 @@ gulp.task('sass', function () {
 
 // watch sass
 gulp.task('sass:watch', function () {
-  gulp.watch(['./sass/**/*.*'], ['sass']);
+  gulp.watch(['./app/sass/**/*.*'], ['sass']);
 });
 
 // compile app
@@ -96,11 +96,11 @@ gulp.task('app', function () {
   var buildApp = function (app) {
     console.log(app);
     var g = gulp.src([
-      'src/browser/' + app + '/vendor/**/*.js',
-      'src/browser/' + app + '/app.js',
-      'src/browser/' + app + '/utils/**/*.js',
-      'src/browser/' + app + '/behaviors/**/*.js',
-      'src/browser/' + app + '/components/**/*.js'
+      'app/js/vendor/**/*.js',
+      'app/js/app.js',
+      'app/js/utils/**/*.js',
+      'app/js/behaviors/**/*.js',
+      'app/js/components/**/*.js'
     ]);
 
     g.pipe(concat(app + '.js')).pipe(dest('js'));
@@ -113,10 +113,10 @@ gulp.task('app', function () {
 
 // compile assets
 gulp.task('assets', function () {
-  gulp.src(['src/assets/fonts/**/*.*']).pipe(dest('fonts'));
-  gulp.src(['src/assets/img/**/*.*']).pipe(dest('img'));
-  gulp.src(['src/assets/css/**/*.*']).pipe(dest('css'));
-  gulp.src(['src/assets/data/**/*.*']).pipe(dest('data'));
+  gulp.src(['app/assets/fonts/**/*.*']).pipe(dest('fonts'));
+  gulp.src(['app/assets/img/**/*.*']).pipe(dest('img'));
+  gulp.src(['app/assets/css/**/*.*']).pipe(dest('css'));
+  gulp.src(['app/assets/data/**/*.*']).pipe(dest('data'));
 });
 
 // clean build
@@ -127,14 +127,19 @@ gulp.task('clean', function () {
   del([dest('img/*', true), dest('!img/.gitignore', true)]);
 });
 
+// compile template
+gulp.task('template', function () {
+  gulp.src(['app/views/**/*.*']).pipe(dest('/views'));
+});
+
 // compile everything
-gulp.task('compile', ['sass', 'app'], function () {});
+gulp.task('compile', ['sass', 'app', 'assets', 'template'], function () {});
 
 // watch and build during development
-gulp.task('watch', ['app', 'sass'], function () {
+gulp.task('watch', [ 'assets', 'template', 'app', 'sass' ], function () {
   //gulp.watch(['./bower_components/**/*.*'], ['bower']);
-  //gulp.watch(['./src/**/*.*'], ['app']);
+  //gulp.watch(['./app/**/*.*'], ['app']);
   //gulp.watch(['./assets/**/*.*'], ['assets']);
-  gulp.watch(['./sass/**/*.*'], ['sass']);
-  gulp.watch(['./browser/**/*.*'], ['app']);
+  gulp.watch(['./app/sass/**/*.*'], ['sass']);
+  gulp.watch(['./app/js/**/*.*'], ['app']);
 });

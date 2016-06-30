@@ -4,13 +4,14 @@ var $downloadResume = app.$body.find('.download-resume');
 
 function displayData(data) {
 
-  app.utils.ajax.get('views/main.html').then(function(tmpl){
+  app.utils.ajax.get('public/views/main.html').then(function(tmpl){
 
     var compiled_html = _.template(tmpl)({
       resume: data
     });
     // appent to body
-    $('body').prepend(compiled_html);
+    //$('body').prepend(compiled_html);
+    $('#main-app').html(compiled_html)
   });
 }
 
@@ -26,7 +27,7 @@ function displayData(data) {
       displayData(resumeData);
     } else {
       console.log('nahi mila')
-      app.utils.ajax.get('data/resume.json').then(function(data){
+      app.utils.ajax.get('public/data/resume.json').then(function(data){
         localStorage.setItem('resumeData', JSON.stringify(data));
         displayData(data);
       });

@@ -647,19 +647,86 @@ $(function(){
   app.behaviors.global();
 });
 
+app.components.settingsBtn = function($btn) {
+
+	$btn.on('click', function(ev){
+		ev.preventDefault();
+		console.log('settings btn clicked');
+    
+    var data = JSON.parse(window.localStorage.getItem('resumeData'));
+
+    displayData(data, 'modals/resumeModal', $('#resumeModal'));
+    app.utils.loadModal('#resumeModal');
+	})
+
+
+	function displayData(data, template, $target) {
+	  var templateUrl = 'public/views/' + template + '.html';
+	  app.utils.ajax.get(templateUrl).then(function(tmpl){
+
+	    var compiled_html = _.template(tmpl)({
+	      data: data
+	    });
+
+	    // appent to body
+	    $target.html(compiled_html);
+	    // $target.find('img').each(function () {
+	    //   var $this = $(this);
+	    //   app.utils.loadImg($this);
+	    // });
+	  });
+	}
+
+
+}
+app.components.resumeModal = function($modal) {
+
+	var $updateResume = $modal.find('.update-resume');
+	var $resetResume = $modal.find('.reset-resume');
+  var $resumeDataDiv = $modal.find('#resume-data');
+
+	$updateResume.on('click', function(ev){
+		ev.preventDefault();
+		
+		var data = $resumeDataDiv.html();
+
+    localStorage.setItem('resumeData', data);
+
+    location.reload();
+		
+	})
+
+	$resetResume.on('click', function(ev){
+		ev.preventDefault();
+		
+		//console.log('reset resume btn clicked');
+		
+		localStorage.clear();
+    location.reload();
+
+		// app.utils.ajax.get('public/data/resume.json').then(function(data){
+
+		//   $resumeDataDiv.html(JSON.stringify(data, undefined, 2));
+
+		// });
+
+	})
+
+}
 app.components.site = function($site) {
 
 var $downloadResume = app.$body.find('.download-resume');
 
 function displayData(data) {
 
-  app.utils.ajax.get('views/main.html').then(function(tmpl){
+  app.utils.ajax.get('public/views/main.html').then(function(tmpl){
 
     var compiled_html = _.template(tmpl)({
       resume: data
     });
     // appent to body
-    $('body').prepend(compiled_html);
+    //$('body').prepend(compiled_html);
+    $('#main-app').html(compiled_html)
   });
 }
 
@@ -675,7 +742,7 @@ function displayData(data) {
       displayData(resumeData);
     } else {
       console.log('nahi mila')
-      app.utils.ajax.get('data/resume.json').then(function(data){
+      app.utils.ajax.get('public/data/resume.json').then(function(data){
         localStorage.setItem('resumeData', JSON.stringify(data));
         displayData(data);
       });
