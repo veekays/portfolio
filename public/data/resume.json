@@ -54,105 +54,110 @@
   },
 
   "works": [
-  {
-  "company": "frankly.me",
-  "startDate": "2015-02-19",
-  "endDate": "2015-05-30",
-  "summery": "web intern",
-  "website": "http://frankly.me",
-  "position": "Intern",
-  "stack": "html, bootstrap, stylus, jquery, angularjs",
-  "team": "under three mentors and with BD team",
-  "contribution": "designed and developed embed widgets (iframe code), preview and get widgets page",
-  "highlights": "batch video widgets , answer widgets"
-  },
-  {
-  "company": "frankly.me",
-  "startDate": "2015-07-01",
-  "endDate": "2015-09-30",
-  "summery": "A social video micro blogging platform. A video twitter in a layman's language.",
-  "website": "http://frankly.me",
-  "position": "web developer",
-  "stack": "html, sass, jquery, nodejs",
-  "team": "12 members in frientend team",
-  "contribution": "developed widgets app on expressjs, a get widgets static page to generate script and responsive widgets",
-  "highlights": "video-comment widgets, web video recorder, hiring/audition widgets, hiring panel, admin(moderation) panel"
-  },
-  {
-  "company": "flatabout",
-  "startDate": "2015-10-01",
-  "endDate": "2015-11-30",
-  "summery": "Truecaller for addresses/Tripadvisor for real estate·",
-  "website": "http://flatabout.com",
-  "position": "full stack developer",
-  "stack": "html, sass, jquery, nodejs, psql",
-  "team": "remote location",
-  "contribution": "Inherited existing infrastructure powering Flatabout's mobile app , with restful APIs written in node.js. The tech stack included custom framework with custom table gateway over top of express.js and using kne.js for table gateway. Responsibilities included , building a new web interface for Flatabout and working on the existing backend infrastructure towards adding new features as per the initial evolution of the business idea.",
-  "highlights": "Rolled out my own framework on top of express.js , consuming rest APIs on server to build server rendered single page app That provides the look and feel of using modern single page app development frameworks like angularjs, ember etc. And with ability to retain easy and regular seo optimization as required by young business idea to gain traction through every channel And on the front-end side rising regular jqury. integrated thumbor on lenode to nginx route for on demand custom image serving."
-  }
+    {
+      "company": "frankly.me",
+      "startDate": "2015-02-19",
+      "endDate": "2015-05-30",
+      "summery": "web intern",
+      "website": "http://frankly.me",
+      "position": "Intern",
+      "stack": "html, bootstrap, stylus, jquery, angularjs",
+      "team": "under three mentors and with BD team",
+      "contribution": "designed and developed embed widgets (iframe code), preview and get widgets page",
+      "highlights": "batch video widgets , answer widgets"
+    },
+    {
+      "company": "frankly.me",
+      "startDate": "2015-07-01",
+      "endDate": "2015-09-30",
+      "summery": "A social video micro blogging platform. A video twitter in a layman's language.",
+      "website": "http://frankly.me",
+      "position": "web developer",
+      "stack": "html, sass, jquery, nodejs",
+      "team": "12 members in frientend team",
+      "contribution": "developed widgets app on expressjs, a get widgets static page to generate script and responsive widgets",
+      "highlights": "video-comment widgets, web video recorder, hiring/audition widgets, hiring panel, admin(moderation) panel"
+    },
+    {
+      "company": "flatabout",
+      "startDate": "2015-10-01",
+      "endDate": "2015-11-30",
+      "summery": "Truecaller for addresses/Tripadvisor for real estate·",
+      "website": "http://flatabout.com",
+      "position": "full stack developer",
+      "stack": "html, sass, jquery, nodejs, psql",
+      "team": "remote location",
+      "contribution": "Inherited existing infrastructure powering Flatabout's mobile app , with restful APIs written in node.js. The tech stack included custom framework with custom table gateway over top of express.js and using kne.js for table gateway. Responsibilities included , building a new web interface for Flatabout and working on the existing backend infrastructure towards adding new features as per the initial evolution of the business idea.",
+      "highlights": "Rolled out my own framework on top of express.js , consuming rest APIs on server to build server rendered single page app That provides the look and feel of using modern single page app development frameworks like angularjs, ember etc. And with ability to retain easy and regular seo optimization as required by young business idea to gain traction through every channel And on the front-end side rising regular jqury. integrated thumbor on lenode to nginx route for on demand custom image serving."
+    }
   ],
+  
   "awards": [
-  {
-  "date": "2013-03-22",
-  "title": "representation",
-  "awarder": "SCRIET Cultural Society"
-  }
+    {
+      "date": "2013-03-22",
+      "title": "representation",
+      "awarder": "SCRIET Cultural Society"
+    }
   ],
 
   "skills": [
-  {
-  "name": "Frontend",
-  "keywords": "html, css, javascript"
-  },
-  {
-  "name": "Backend",
-  "keywords": "Nodejs"
-  },
-  {
-  "name": "Frameworks",
-  "keywords": "expressjs, bootstrap, materializecss, jquery, angularjs, foundation, django"
-  },
-  {
-  "name": "Tools",
-  "keywords": "linux (ubuntu, fedora, debian), sublime, atom, git, bitbucket, heroku, openshift, compute engine, aws"
-  }
+    {
+      "name": "Frontend",
+      "keywords": "html, css, javascript"
+    },
+    {
+      "name": "Backend",
+      "keywords": "Nodejs"
+    },
+    {
+      "name": "Frameworks",
+      "keywords": "expressjs, bootstrap, materializecss, jquery, angularjs, foundation, django"
+    },
+    {
+      "name": "Tools",
+      "keywords": "linux (ubuntu, fedora, debian), sublime, atom, git, bitbucket, heroku, openshift, compute engine, aws"
+    }
   ],
+  
   "hobbies": "drawing, music",
+  
   "education": [
-  {
-  "gpa": "65%",
-  "field": "Computer Science",
-  "class": "B.tech",
-  "endDate": "2016-05-31",
-  "startDate": "2012-07-22",
-  "university": "C.C.S. University, Meerut",
-  "institution": "SCRIET"
-  },
-  {
-  "gpa": "62%",
-  "field": "Science",
-  "class": "Intermidate",
-  "endDate": "2010-03-30",
-  "startDate": "2009-03-30",
-  "university": "CBSE",
-  "institution": "Gyankunj Academy, Ballia"
-  },
-  {
-  "gpa": "78%",
-  "field": "Science",
-  "class": "High School",
-  "endDate": "2008-03-05",
-  "startDate": "2005-03-05",
-  "university": "CBSE",
-  "institution": "St. Xavier's School Ballia"
-  }
+    {
+      "gpa": "65%",
+      "field": "Computer Science",
+      "class": "B.tech",
+      "endDate": "2016-05-31",
+      "startDate": "2012-07-22",
+      "university": "C.C.S. University, Meerut",
+      "institution": "SCRIET"
+    },
+    {
+      "gpa": "62%",
+      "field": "Science",
+      "class": "Intermidate",
+      "endDate": "2010-03-30",
+      "startDate": "2009-03-30",
+      "university": "CBSE",
+      "institution": "Gyankunj Academy, Ballia"
+    },
+    {
+      "gpa": "78%",
+      "field": "Science",
+      "class": "High School",
+      "endDate": "2008-03-05",
+      "startDate": "2005-03-05",
+      "university": "CBSE",
+      "institution": "St. Xavier's School Ballia"
+    }
   ],
+  
   "references": [
-  {
-  "name": "me",
-  "reference": "enthusiastic"
-  }
+    {
+      "name": "me",
+      "reference": "enthusiastic"
+    }
   ],
+  
   "projects": [
     
     {
