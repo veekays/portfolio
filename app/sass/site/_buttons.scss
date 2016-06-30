@@ -28,12 +28,13 @@
   right:3%;
   z-index:100;
   font-size:17px;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
       
 }
 
   
 @media only screen and (max-width: 767px) {
-  .scroll-top-btn {
+  .btn-float {
     margin-bottom: 3px;
     right: 3px;
     border-radius: 0;
