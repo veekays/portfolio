@@ -69,19 +69,6 @@
     },
 
     {
-      "company": "freelance",
-      "startDate": "2016-02-01",
-      "endDate": "2016-04-01",
-      "summery": "worked in collaboration of a senior developer on a freelance project, a personal assistant tool to help in planing, forecasting, saving and investing assets",
-      "website": "",
-      "position": "fullstack developer",
-      "stack": "nodejs, expressjs, tabel, postgresql, html, bootstrap, sass, jquery",
-      "team": "with one senior developer",
-      "contribution": "developed prototype level product",
-      "highlights": "better ux and visualization of data"
-    },
-
-    {
       "company": "frankly.me",
       "startDate": "2015-02-19",
       "endDate": "2015-05-30",
