@@ -1,7 +1,7 @@
 
 <div class="container white resume-template-default hidden-print">
   <div class="row ">
-    <div class="col-xs-12 col-md-3 left-container equal">
+    <div class="col-xs-12 col-md-3 left-container equal animated fadeInUp">
     <div class="row profile-label  padding-40 padding-bottom-0">
       <div class="col-xs-6 col-xs-offset-3 col-sm-6 col-sm-offset-3 col-md-12 col-md-offset-0 col-lg-12 col-lg-offset-0">
         <img class="img-circle img-responsive" src="<%= resume.basics.avatar %>">
@@ -69,7 +69,7 @@
       </div>
     </div>
     </div>
-    <div class="col-xs-12 col-md-9 right-container equal">
+    <div class="col-xs-12 col-md-9 right-container equal animated fadeInUp">
 
       <div class="row margin-0 padding-top-30 padding-bottom-30">
         <!-- Nav tabs -->
@@ -87,12 +87,12 @@
 
         <!-- Tab panes -->
         <div class="tab-content col-sm-12">
-          <div role="tabpanel" class="tab-pane fade in active row" id="portfolio">
+          <div role="tabpanel" class="tab-pane active row animated fadeInUp" id="portfolio">
 
 
         <% _.forEach(resume.projects, function(project){ %>
         <div class="col-sm-6">
-          <div class="flat-card">
+          <div class="flat-card animated fadeInUp">
             <div class="flat-card-img">
               <img class="img-responsive"src="<%= project.images[0] %>">
             </div>
@@ -125,7 +125,7 @@
 
           </div>
 
-          <div role="tabpanel" class="tab-pane fade" id="experience">
+          <div role="tabpanel" class="tab-pane animated fadeInLeft" id="experience">
 
 
               <% _.forEach(_.sortBy(resume.works, 'startDate').reverse(), function(work, i) { %>
@@ -200,7 +200,7 @@
           </div>
 
 
-          <div role="tabpanel" class="tab-pane fade" id="education">
+          <div role="tabpanel" class="tab-pane animated fadeInLeft" id="education">
           <div class="row">
             <div class="col-sm-12">
               <% _.forEach(resume.education, function (edu, i) { %>

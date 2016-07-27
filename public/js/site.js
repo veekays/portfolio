@@ -512,18 +512,6 @@ app.utils.getPartial = function (url, partial, $parent) {
     }, 2000);
   };
 
-  app.utils.equalize = function () {
-      // 
-      // var heights = $(".equal").map(function() {
-      //   return $(this).parent().height();
-      // }).get(),
-      //
-      // maxHeight = Math.max.apply(null, heights);
-
-      $(".equal").height(app.$body.height());
-
-  }
-
 // modal bg-z-index
 app.utils.modalBgZIndex = 1050;
 
@@ -643,14 +631,15 @@ app.$document.on('keyup', function (ev) {
 app.behaviors.global = function () {
 
   app.$window.on("scroll", function(e) {
+    if (app.$body.height() > $(".equal").height()) {
+      $(".equal").height(app.$body.height());
+    }
     var scrollTop = app.$window.scrollTop();
         if (scrollTop > 600 ) {
 
         } else {
 
         }
-
-
   });
 
   };
@@ -740,9 +729,6 @@ function displayData(data) {
     //$('body').prepend(compiled_html);
     $('#main-app').html(compiled_html)
 
-    setTimeout(function () {
-      app.utils.equalize();
-    }, 3000);
   });
 }
 

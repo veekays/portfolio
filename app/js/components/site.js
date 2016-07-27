@@ -13,9 +13,6 @@ function displayData(data) {
     //$('body').prepend(compiled_html);
     $('#main-app').html(compiled_html)
 
-    setTimeout(function () {
-      app.utils.equalize();
-    }, 3000);
   });
 }
 
