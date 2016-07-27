@@ -6,20 +6,19 @@ app.components.resumeModal = function($modal) {
 
 	$updateResume.on('click', function(ev){
 		ev.preventDefault();
-		
-		var data = $resumeDataDiv.html();
 
+		var data = $resumeDataDiv.val();
     localStorage.setItem('resumeData', data);
 
     location.reload();
-		
+
 	})
 
 	$resetResume.on('click', function(ev){
 		ev.preventDefault();
-		
+
 		//console.log('reset resume btn clicked');
-		
+
 		localStorage.clear();
     location.reload();
 

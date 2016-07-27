@@ -12,6 +12,10 @@ function displayData(data) {
     // appent to body
     //$('body').prepend(compiled_html);
     $('#main-app').html(compiled_html)
+
+    setTimeout(function () {
+      app.utils.equalize();
+    }, 3000);
   });
 }
 
@@ -22,11 +26,11 @@ function displayData(data) {
     var resumeData = {};
           // Code for localStorage/sessionStorage.
     if (localStorage.resumeData) {
-      console.log('mila')
+      // console.log('mila')
       resumeData = JSON.parse(window.localStorage.getItem('resumeData'));
       displayData(resumeData);
     } else {
-      console.log('nahi mila')
+      // console.log('nahi mila')
       app.utils.ajax.get('public/data/resume.json').then(function(data){
         localStorage.setItem('resumeData', JSON.stringify(data));
         displayData(data);
@@ -40,7 +44,7 @@ function displayData(data) {
   $downloadResume.find('span').html('download Resume');
   $downloadResume.on('click', function (ev) {
   ev.preventDefault();
-  
+
   window.print();
 
   });

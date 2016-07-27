@@ -11,7 +11,7 @@ app.behaviors.global = function () {
 
   });
 
-};
+  };
 
 $(function(){
   app.behaviors.global();

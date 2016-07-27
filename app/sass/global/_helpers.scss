@@ -103,7 +103,7 @@ $range: 200;
 .container-parallax {
   position: relative;
 }
- 
+
 .bg-parallax {
   max-width: 100%;
   overflow: hidden;
@@ -144,4 +144,12 @@ $range: 200;
 
 .pre-wrap {
   white-space: pre-line;
+}
+
+.json-editor {
+  display: block;
+  white-space: pre;
+  font-family: Monospace;
+  min-height: 400px;
+  width: 100%;
 }

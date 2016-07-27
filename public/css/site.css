@@ -13998,6 +13998,13 @@ button.close {
 .pre-wrap {
   white-space: pre-line; }
 
+.json-editor {
+  display: block;
+  white-space: pre;
+  font-family: Monospace;
+  min-height: 400px;
+  width: 100%; }
+
 /*!
 Animate.css - http://daneden.me/animate
 Licensed under the MIT license
@@ -16639,7 +16646,7 @@ body.mini-navbar .navbar-static-side {
 .btn-long {
   padding: 6px 32px; }
 
-.btn-float {
+.btn-float, .download-resume {
   background-color: #fff;
   position: fixed;
   bottom: 20px;
@@ -16648,12 +16655,23 @@ body.mini-navbar .navbar-static-side {
   font-size: 17px;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22); }
 
+.download-resume {
+  bottom: 100px; }
+
 @media only screen and (max-width: 767px) {
-  .btn-float {
+  .btn-float, .download-resume {
     right: 0;
     border-radius: 0;
     border-top-left-radius: 3px;
-    bottom: 0; } }
+    bottom: 0; }
+
+  .download-resume {
+    right: auto;
+    left: 0;
+    bottom: 0;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 3px;
+    font-size: 2em; } }
 .default-list .list-item {
   position: relative;
   display: block;

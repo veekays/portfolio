@@ -120,7 +120,7 @@ app.utils.notify = function (text, type, duration) {
             $('#alert-box').fadeOut().html('loading <a href="#" class="close">&times;</a>');
         }, duration * 1000);
     }
-    
+
 };
 
 
@@ -435,3 +435,15 @@ app.utils.getPartial = function (url, partial, $parent) {
       scrollTop: $div.offset().top
     }, 2000);
   };
+
+  app.utils.equalize = function () {
+      // 
+      // var heights = $(".equal").map(function() {
+      //   return $(this).parent().height();
+      // }).get(),
+      //
+      // maxHeight = Math.max.apply(null, heights);
+
+      $(".equal").height(app.$body.height());
+
+  }

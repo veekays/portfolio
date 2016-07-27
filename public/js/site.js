@@ -196,7 +196,7 @@ app.utils.notify = function (text, type, duration) {
             $('#alert-box').fadeOut().html('loading <a href="#" class="close">&times;</a>');
         }, duration * 1000);
     }
-    
+
 };
 
 
@@ -512,6 +512,18 @@ app.utils.getPartial = function (url, partial, $parent) {
     }, 2000);
   };
 
+  app.utils.equalize = function () {
+      // 
+      // var heights = $(".equal").map(function() {
+      //   return $(this).parent().height();
+      // }).get(),
+      //
+      // maxHeight = Math.max.apply(null, heights);
+
+      $(".equal").height(app.$body.height());
+
+  }
+
 // modal bg-z-index
 app.utils.modalBgZIndex = 1050;
 
@@ -641,7 +653,7 @@ app.behaviors.global = function () {
 
   });
 
-};
+  };
 
 $(function(){
   app.behaviors.global();
@@ -687,20 +699,19 @@ app.components.resumeModal = function($modal) {
 
 	$updateResume.on('click', function(ev){
 		ev.preventDefault();
-		
-		var data = $resumeDataDiv.html();
 
+		var data = $resumeDataDiv.val();
     localStorage.setItem('resumeData', data);
 
     location.reload();
-		
+
 	})
 
 	$resetResume.on('click', function(ev){
 		ev.preventDefault();
-		
+
 		//console.log('reset resume btn clicked');
-		
+
 		localStorage.clear();
     location.reload();
 
@@ -713,6 +724,7 @@ app.components.resumeModal = function($modal) {
 	})
 
 }
+
 app.components.site = function($site) {
 
 var $downloadResume = app.$body.find('.download-resume');
@@ -727,6 +739,10 @@ function displayData(data) {
     // appent to body
     //$('body').prepend(compiled_html);
     $('#main-app').html(compiled_html)
+
+    setTimeout(function () {
+      app.utils.equalize();
+    }, 3000);
   });
 }
 
@@ -737,11 +753,11 @@ function displayData(data) {
     var resumeData = {};
           // Code for localStorage/sessionStorage.
     if (localStorage.resumeData) {
-      console.log('mila')
+      // console.log('mila')
       resumeData = JSON.parse(window.localStorage.getItem('resumeData'));
       displayData(resumeData);
     } else {
-      console.log('nahi mila')
+      // console.log('nahi mila')
       app.utils.ajax.get('public/data/resume.json').then(function(data){
         localStorage.setItem('resumeData', JSON.stringify(data));
         displayData(data);
@@ -755,7 +771,7 @@ function displayData(data) {
   $downloadResume.find('span').html('download Resume');
   $downloadResume.on('click', function (ev) {
   ev.preventDefault();
-  
+
   window.print();
 
   });
