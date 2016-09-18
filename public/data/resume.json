@@ -64,8 +64,8 @@
       "position": "Game developer",
       "stack": "Unity 3D, C#",
       "team": "under three mentors and with BD team",
-      "contribution": "scapffold, developed and deployed angularjs app ",
-      "highlights": "structuring project and devops"
+      "contribution": "developed and deploy some Game",
+      "highlights": "Gaming"
     }
   ],
 
@@ -134,18 +134,18 @@
   "projects": [
 
     {
-      "title": "two cars",
-      "summery": "desktop game",
-      "images": [""],
-      "live_link": "",
-      "code_link": "",
+      "title": "Two Cars",
+      "summery": "Desktop Game",
+      "images": ["http://i.imgur.com/j9JWiu3.png,http://i.imgur.com/ARBVz49.png,http://i.imgur.com/Psp843G.png,"],
+      "live_link": "sorry-will-be-live-soon",
+      "code_link": "private-for-now",
       "details": [
         {
-          "Backend":"",
-          "Server":"",
-          "Frontend":"",
-          "Styling":"",
-          "dev tools":""
+          "Backend":"No use",
+          "Server":"No use of server",
+          "Frontend":"No use",
+          "Language":"C#",
+          "dev tools":"Unity 3D"
         }
       ]
     }
