@@ -3,23 +3,23 @@
 
   "basics": {
 
-    "avatar": "public/img/logo.png",
+    "avatar": "http://i.imgur.com/DXQ5qwj.jpg?1",
 
-    "dob": "1993-09-15",
+    "dob": "1995-07-10",
 
-    "name": "Satyam Yadav",
+    "name": "Vikas Kumar Singh",
 
-    "email": "satyamyadav3@gmail.com",
+    "email": "vikaskumarsingh9838@gmail.com",
 
-    "label": "Web Developer",
+    "label": "Game Developer",
 
-    "mobile": "9911194204",
+    "mobile": "7533017710",
 
-    "whatsapp": "7376867678",
+    "whatsapp": "9838036897",
 
     "summery": "I aspire to work in an environment demanding technical, programming , communication and functional expertise for facing and overcoming everyday challenges which require me to be up to date with the technology and continuously strive for enhancing my skills.",
 
-    "strength": "self motivated self learner, open to learn anytime, can develop end to end applications (frontend, backend, deployment, tooling) to solve a realworld problem and can work continuously for solving it",
+    "strength": "self motivated self learner, open to learn anytime, can develop Game applications (Android, ios, pc and other platform) to provide a entertaining environment and can work continuously for it",
 
     "weakness": "takes too much time to solve mathematical and algorithmic puzzles (have no practice), needs google (don't remember things)",
 
@@ -34,20 +34,20 @@
 
       {
         "network": "facebook",
-        "username": "satyam.py",
-        "url": "https://www.facebook.com/satyam.py"
+        "username": "Vikas Kumar Singh",
+        "url": "https://www.facebook.com/vikaskumar.singh.984"
 
       },
       {
         "network": "github",
-        "username": "satyamyadav",
-        "url": "https://github.com/satyamyadav"
+        "username": "veekays",
+        "url": "https://github.com/veekays"
 
       },
       {
         "network": "linkedin",
-        "username": "satyamyadav3",
-        "url": "https://www.linkedin.com/in/satyamyadav3"
+        "username": "Vikas Singh",
+        "url": "https://www.linkedin.com/in/vikas-singh-9161a4103"
 
       }
     ]
@@ -56,66 +56,16 @@
   "works": [
 
     {
-      "company": "symptum.com",
-      "startDate": "2016-06-02",
-      "endDate": "2016-07-02",
-      "summery": "developed an angularjs app with listing and elastic search integration",
-      "website": "http://symptum.com",
-      "position": "frontend developer",
-      "stack": "angularjs, html, bootstrap, sass, jquery",
-      "team": "remote",
+      "company": "mych.co.in",
+      "startDate": "2016-06-03",
+      "endDate": "2016-09-01",
+      "summery": "developed some games",
+      "website": "http://mych.co.in",
+      "position": "Game developer",
+      "stack": "Unity 3D, C#",
+      "team": "under three mentors and with BD team",
       "contribution": "scapffold, developed and deployed angularjs app ",
       "highlights": "structuring project and devops"
-    },
-
-    {
-      "company": "freelance",
-      "startDate": "2016-03-02",
-      "endDate": "2016-05-15",
-      "summery": "worked under guidance of a senior developer to build a financial assistant",
-      "website": "",
-      "position": "fullstack developer",
-      "stack": "postgresql, nodejs, nginx, expressjs, bootstrap, sass, jquery",
-      "team": "remote",
-      "contribution": "developed backend and front-end",
-      "highlights": "structuring project, refelcted the business logic into to product"
-    },
-
-    {
-      "company": "frankly.me",
-      "startDate": "2015-02-19",
-      "endDate": "2015-05-30",
-      "summery": "web intern",
-      "website": "http://frankly.me",
-      "position": "Intern",
-      "stack": "html, bootstrap, stylus, jquery, angularjs",
-      "team": "under three mentors and with BD team",
-      "contribution": "designed and developed embed widgets (iframe code), preview and get widgets page",
-      "highlights": "batch video widgets , answer widgets"
-    },
-    {
-      "company": "frankly.me",
-      "startDate": "2015-07-01",
-      "endDate": "2015-09-30",
-      "summery": "A social video micro blogging platform. A video twitter in a layman's language.",
-      "website": "http://frankly.me",
-      "position": "web developer",
-      "stack": "html, sass, jquery, nodejs",
-      "team": "12 members in frientend team",
-      "contribution": "developed widgets app on expressjs, a get widgets static page to generate script and responsive widgets",
-      "highlights": "video-comment widgets, web video recorder, hiring/audition widgets, hiring panel, admin(moderation) panel"
-    },
-    {
-      "company": "flatabout",
-      "startDate": "2015-10-01",
-      "endDate": "2015-11-30",
-      "summery": "Truecaller for addresses/Tripadvisor for real estate·",
-      "website": "http://flatabout.com",
-      "position": "full stack developer",
-      "stack": "html, sass, jquery, nodejs, psql",
-      "team": "remote location",
-      "contribution": "Inherited existing infrastructure powering Flatabout's mobile app , with restful APIs written in node.js. The tech stack included custom framework with custom table gateway over top of express.js and using kne.js for table gateway. Responsibilities included , building a new web interface for Flatabout and working on the existing backend infrastructure towards adding new features as per the initial evolution of the business idea.",
-      "highlights": "Rolled out my own framework on top of express.js , consuming rest APIs on server to build server rendered single page app That provides the look and feel of using modern single page app development frameworks like angularjs, ember etc. And with ability to retain easy and regular seo optimization as required by young business idea to gain traction through every channel And on the front-end side rising regular jqury. integrated thumbor on lenode to nginx route for on demand custom image serving."
     }
   ],
 
@@ -129,52 +79,48 @@
 
   "skills": [
     {
-      "name": "Frontend",
-      "keywords": "html, css, javascript"
+      "name": "Android",
+      "keywords": "apk build"
     },
     {
-      "name": "Backend",
-      "keywords": "Nodejs"
-    },
-    {
-      "name": "Frameworks",
-      "keywords": "expressjs, bootstrap, materializecss, jquery, angularjs, foundation, django"
+      "name": "ios",
+      "keywords": "ipa build"
     },
     {
       "name": "Tools",
-      "keywords": "linux (ubuntu, fedora, debian), sublime, atom, git, bitbucket, heroku, openshift, compute engine, aws"
+      "keywords": "Linux, sublime, mac, Unity 3D"
     }
   ],
 
-  "hobbies": "drawing, music",
+  "hobbies": "drawing, music, basketball, cricket",
 
   "education": [
     {
-      "gpa": "65%",
+      "gpa": "74%",
       "field": "Computer Science",
       "class": "B.tech",
-      "endDate": "2016-05-31",
+      "endDate": "2016-06-30",
       "startDate": "2012-07-22",
       "university": "C.C.S. University, Meerut",
       "institution": "SCRIET"
     },
     {
-      "gpa": "62%",
+      "gpa": "65%",
       "field": "Science",
       "class": "Intermidate",
-      "endDate": "2010-03-30",
-      "startDate": "2009-03-30",
+      "endDate": "2012-03-31",
+      "startDate": "2011-04-01",
       "university": "CBSE",
-      "institution": "Gyankunj Academy, Ballia"
+      "institution": "Swami Harsewanand Public School"
     },
     {
-      "gpa": "78%",
+      "gpa": "5.4cgpa",
       "field": "Science",
       "class": "High School",
-      "endDate": "2008-03-05",
-      "startDate": "2005-03-05",
+      "endDate": "2010-03-31",
+      "startDate": "2009-04-01",
       "university": "CBSE",
-      "institution": "St. Xavier's School Ballia"
+      "institution": "Swami Harsewanand Public School"
     }
   ],
 
@@ -188,69 +134,18 @@
   "projects": [
 
     {
-      "title": "learn-together",
-      "summery": "A project and idea sharing web portal for college students, expressjs server with postgres tabel (knex wrapper orm), a expressjs microserver to render frontend written in ejs(partials) and jquery (components) working as single page app",
-      "images": ["public/img/projects/ossdg-1.png"],
-      "live_link": "http://learn-together.herokuapp.com",
-      "code_link": "https://github.com/satyamyadav/lt-frontend",
+      "title": "two cars",
+      "summery": "desktop game",
+      "images": [""],
+      "live_link": "",
+      "code_link": "",
       "details": [
         {
-          "Backend":"expressjs postgresql",
-          "Server":"heroku",
-          "Frontend":"expressjs microserver, ejs, jquery",
-          "Styling":"bootstrap sass",
-          "dev tools":"gulp, bower, npm"
-        }
-      ]
-    },
-
-    {
-      "title": "my-resume",
-      "summery": "`Resume` is complex front-end for making portfolio building easy, the site is client side rendered lodash template, jquery app and bootstrap sass. A json file and template is loaded with ajax and then compiled template is appended to body.",
-      "images": ["public/img/projects/resume-1.png"],
-      "live_link": "http://satyamyadav.github.io/resume",
-      "code_link": "http://github.com/satyamyadav/resume",
-      "details": [
-        {
-          "Backend":"none",
-          "Server":"github's gh-pages",
-          "Frontend":"jquery lodash template rendering",
-          "Styling":"bootstrap sass",
-          "dev tools":"gulp, bower, npm"
-        }
-      ]
-    },
-
-    {
-      "title": "len-den",
-      "summery": "An app to list and calculate lended money | An app without signup and profile. Html string of components appended, local storage is used to save data.",
-      "images": ["public/img/projects/len-den-1.jpg"],
-      "live_link": "http://satyamyadav.github.io/len-den",
-      "code_link": "http://github.com/satyamyadav/len-den",
-      "details": [
-        {
-          "Backend":"none",
-          "Server":"github's gh-pages",
-          "Frontend":"jquery html string rendering",
-          "Styling":"materialize css",
-          "DB":"local storage"
-        }
-      ]
-    },
-
-    {
-      "title": "Blog",
-      "summery": "Best way to learn web development is to build something ! so I started building something when I started learning web.",
-      "images": ["http://satyamyadav.github.io/img/screenshots/030.jpg"],
-      "live_link": "http://satyamyadav.github.io",
-      "code_link": "http://github.com/satyamyadav/blog",
-      "details": [
-        {
-          "Backend":"diffrent for differnt versions",
-          "Server":"github's gh-pages , openshift",
-          "Frontend":"jquery, html",
-          "Styling":"bootstrap, css3",
-          "DB":"sqlite3"
+          "Backend":"",
+          "Server":"",
+          "Frontend":"",
+          "Styling":"",
+          "dev tools":""
         }
       ]
     }
