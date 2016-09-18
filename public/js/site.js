@@ -463,11 +463,12 @@ app.utils.scrollLock = function(arr){
 app.utils.getPartial = function (url, partial, $parent) {
       var data = {
         partials: [partial],
-      }
+      };
+      
       $parent.html(app.utils.preloaderHtml());
-      app.utils.ajax.get(url, {
-        data
-      }).then(function (data) {
+      
+      app.utils.ajax.get(url, data
+      ).then(function (data) {
         var el = document.createElement('div');
         el.innerHTML = data[partial];
         if ($(el).html().trim() !=  '') {
@@ -739,11 +740,11 @@ function displayData(data) {
     var resumeData = {};
           // Code for localStorage/sessionStorage.
     if (localStorage.resumeData) {
-      // console.log('mila')
+      console.log('mila')
       resumeData = JSON.parse(window.localStorage.getItem('resumeData'));
       displayData(resumeData);
     } else {
-      // console.log('nahi mila')
+      console.log('nahi mila')
       app.utils.ajax.get('public/data/resume.json').then(function(data){
         localStorage.setItem('resumeData', JSON.stringify(data));
         displayData(data);

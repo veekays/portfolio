@@ -387,11 +387,12 @@ app.utils.scrollLock = function(arr){
 app.utils.getPartial = function (url, partial, $parent) {
       var data = {
         partials: [partial],
-      }
+      };
+      
       $parent.html(app.utils.preloaderHtml());
-      app.utils.ajax.get(url, {
-        data
-      }).then(function (data) {
+      
+      app.utils.ajax.get(url, data
+      ).then(function (data) {
         var el = document.createElement('div');
         el.innerHTML = data[partial];
         if ($(el).html().trim() !=  '') {
