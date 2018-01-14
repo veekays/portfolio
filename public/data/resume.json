@@ -11,23 +11,23 @@
 
     "email": "vikaskumarsingh9838@gmail.com",
 
-    "label": "Game Developer",
+    "label": "UI Developer",
 
     "mobile": "7533017710",
 
     "whatsapp": "9838036897",
 
-    "summery": "I aspire to work in an environment demanding technical, programming , communication and functional expertise for facing and overcoming everyday challenges which require me to be up to date with the technology and continuously strive for enhancing my skills.",
+    "summary": "I aspire to work in an environment demanding technical, programming , communication and functional expertise for facing and overcoming everyday challenges which require me to be up to date with the technology and continuously strive for enhancing my skills.",
 
-    "strength": "self motivated self learner, open to learn anytime, can develop Game applications (Android, ios, pc and other platform) to provide a entertaining environment and can work continuously for it",
+    "strength": "self motivated self learner, open to learn anytime, can develop good website based on React Js, React-Redux, HTML, CSS, JS",
 
-    "weakness": "takes too much time to solve mathematical and algorithmic puzzles (have no practice), needs google (don't remember things)",
+    "weakness": "",
 
     "location": {
-      "house": "Sharma's House",
+      "house": "A-152",
       "pin": "110096",
       "city": "Delhi",
-      "address": "Ashoknagar"
+      "address": "New Ashok nagar"
     },
 
     "profiles": [
@@ -35,7 +35,7 @@
       {
         "network": "facebook",
         "username": "Vikas Kumar Singh",
-        "url": "https://www.facebook.com/vikaskumar.singh.984"
+        "url": "https://www.facebook.com/veekaysh"
 
       },
       {
@@ -59,12 +59,24 @@
       "company": "mych.co.in",
       "startDate": "2016-06-03",
       "endDate": "2016-09-01",
-      "summery": "developed some games",
+      "summary": "developed some games",
       "website": "http://mych.co.in",
       "position": "Game developer",
       "stack": "Unity 3D, C#",
       "team": "under three mentors and with BD team",
       "contribution": "scapffold, developed and deployed angularjs app ",
+      "highlights": "structuring project and devops"
+    },
+    {
+      "company": "Easygov",
+      "startDate": "2017-06-05",
+      "endDate": "Till Date",
+      "summary": "developed Main Wbsite",
+      "website": "http://easygov.co.in",
+      "position": "UI developer",
+      "stack": "React JS, react-redux, html, css, js, jquery, sass, bootstrap, material design",
+      "team": "we have 15 peoples team",
+      "contribution": "Created React-chart",
       "highlights": "structuring project and devops"
     }
   ],
@@ -79,16 +91,12 @@
 
   "skills": [
     {
-      "name": "Android",
-      "keywords": "apk build"
-    },
-    {
-      "name": "ios",
-      "keywords": "ipa build"
+      "name": "React JS",
+      "keywords": "Live project - veekays.github.io/react-chart/"
     },
     {
       "name": "Tools",
-      "keywords": "Linux, sublime, mac, Unity 3D"
+      "keywords": "Linux, Windows, mac"
     }
   ],
 
@@ -134,17 +142,17 @@
   "projects": [
 
     {
-      "title": "two cars",
-      "summery": "desktop game",
+      "title": "React Chart",
+      "summary": "Charts in React Using Chartjs",
       "images": [""],
-      "live_link": "",
-      "code_link": "",
+      "live_link": "https://veekays.github.io/react-chart",
+      "code_link": "https://github.com/veekays/react-chart",
       "details": [
         {
-          "Backend":"",
-          "Server":"",
-          "Frontend":"",
-          "Styling":"",
+          "Backend":"Open Population APIs",
+          "Server":"HTTP Server",
+          "Frontend":"React JS",
+          "Styling":"CSS",
           "dev tools":""
         }
       ]

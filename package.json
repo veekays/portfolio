@@ -2,16 +2,14 @@
   "name": "complex-frontend",
   "version": "0.0.1",
   "description": "complex-frontend",
-  
   "apps": [
     "site"
   ],
-  "author": "Satyam Yadav",
+  "author": "Vikas Kumar Singh",
   "license": "MIT",
-  
   "devDependencies": {
     "del": "^1.1.1",
-    "gulp": "^3.8.11",
+    "gulp": "^3.9.1",
     "gulp-autoprefixer": "^2.3.0",
     "gulp-concat": "^2.5.2",
     "gulp-concat-css": "^2.1.2",
@@ -26,6 +24,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/satyamyadav"
+    "url": "https://github.com/veekays"
   }
 }
