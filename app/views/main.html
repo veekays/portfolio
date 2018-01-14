@@ -26,7 +26,7 @@
               <i class="fa fa-user"></i>
                Me
             </h4>
-            <p class="list-group-item-text text-justified "><%= resume.basics.summery %></p>
+            <p class="list-group-item-text text-justified "><%= resume.basics.summary %></p>
             <h5 class="list-group-item-heading">
                Strength
             </h5>
@@ -100,7 +100,7 @@
               <h3><%= project.title %></h3>
             </div>
             <div class="flat-card-body">
-              <p><%= project.summery %></p>
+              <p><%= project.summary %></p>
               <p>
                 <% _.forEach(project.details, function(d){ %>
                 <%  _.pick(d, function(val, key){ %>
@@ -161,7 +161,7 @@
                       <div class="padding-left-10 row">
                         <div class="col-sm-6">
                           <p class="grey-text text-darken-1">
-                            <%= work.summery %>
+                            <%= work.summary %>
                           </p>
                           <p class=" purple-text text-lighten-3">
                             <%= work.stack %><br />
@@ -284,7 +284,7 @@
         <div class="col-xs-12">
           <div class="flat-card">
             <div class="flat-card-body">
-              <p class="dark-text  text-justified "><%= resume.basics.summery %></p>
+              <p class="dark-text  text-justified "><%= resume.basics.summary %></p>
               <h5 class="">
                 <strong>
                    Strength:
@@ -384,7 +384,7 @@
                     <div class="padding-left-10 row">
                       <div class="col-sm-6">
                         <p class="grey-text text-darken-1">
-                          <%= work.summery %>
+                          <%= work.summary %>
                         </p>
                         <p class=" purple-text text-lighten-3">
                           <%= work.stack %><br />
@@ -435,7 +435,7 @@
                   <h4><%= project.title %></h4>
                 </div>
                 <div class="flat-card-body">
-                  <p><%= project.summery %></p>
+                  <p><%= project.summary %></p>
                   <p>
                     <% _.forEach(project.details, function(d){ %>
                     <%  _.pick(d, function(val, key){ %>
