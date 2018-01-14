@@ -1,25 +1,25 @@
 {
-  "short_name": "satyam yadav",
-  "name": "satyam's resume ",
-  "start_url": "/resume",  
+  "short_name": "vikas singh",
+  "name": "vikas's resume ",
+  "start_url": "/portfolio",  
   "icons": [
     {
-      "src": "public/img/logo.png",
+      "src": "http://i.imgur.com/DXQ5qwj.jpg?1",
       "sizes": "196x196",
       "type": "image/png"
     },
     {
-      "src": "public/img/logo.png",
+      "src": "http://i.imgur.com/DXQ5qwj.jpg?1",
       "sizes": "296x296",
       "type": "image/png"
     },
     {
-      "src": "public/img/logo.png",
+      "src": "http://i.imgur.com/DXQ5qwj.jpg?1",
       "sizes": "496x496",
       "type": "image/png"
     },
     {
-      "src": "public/img/logo.png",
+      "src": "http://i.imgur.com/DXQ5qwj.jpg?1",
       "sizes": "696x696",
       "type": "image/png"
     }
