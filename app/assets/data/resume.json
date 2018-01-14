@@ -142,20 +142,6 @@
   "projects": [
 
     {
-<<<<<<< HEAD
-      "title": "Two Cars",
-      "summery": "Desktop Game",
-      "images": ["http://i.imgur.com/j9JWiu3.png,http://i.imgur.com/ARBVz49.png,http://i.imgur.com/Psp843G.png,"],
-      "live_link": "sorry-will-be-live-soon",
-      "code_link": "private-for-now",
-      "details": [
-        {
-          "Backend":"No use",
-          "Server":"No use of server",
-          "Frontend":"No use",
-          "Language":"C#",
-          "dev tools":"Unity 3D"
-=======
       "title": "React Chart",
       "summary": "Charts in React Using Chartjs",
       "images": [""],
@@ -168,7 +154,6 @@
           "Frontend":"React JS",
           "Styling":"CSS",
           "dev tools":""
->>>>>>> develop
         }
       ]
     }
