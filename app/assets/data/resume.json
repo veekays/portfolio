@@ -144,7 +144,7 @@
     {
       "title": "React Chart",
       "summary": "Charts in React Using Chartjs",
-      "images": [""],
+      "images": ["https://i.imgur.com/pROQzPB.png"],
       "live_link": "https://veekays.github.io/react-chart",
       "code_link": "https://github.com/veekays/react-chart",
       "details": [
@@ -153,7 +153,25 @@
           "Server":"HTTP Server",
           "Frontend":"React JS",
           "Styling":"CSS",
-          "dev tools":""
+          "dev tools":"VS Code"
+        }
+      ]
+    },
+    {
+      "title": "Battery Status Chrome",
+      "summary": "Extension for chrome to check battery status",
+      "images": [
+        "https://i.imgur.com/X4KvglW.png","https://i.imgur.com/83uk5hJ.png"
+      ],
+      "live_link": "",
+      "code_link": "https://github.com/veekays/battery-status-chrome",
+      "details": [
+        {
+          "Backend": "No backend used",
+          "Server": "No server used",
+          "Frontend": "HTML, JS",
+          "Styling": "CSS",
+          "dev tools": "VS Code"
         }
       ]
     }
